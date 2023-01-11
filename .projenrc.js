@@ -1,7 +1,7 @@
 const { awscdk, javascript } = require('projen');
 
 const PROJECT_NAME = '@yicr/secure-cloudfront-origin-bucket';
-const PROJECT_DESCRIPTION = 'Auto deploy website to origin S3 bucket and CloudFront distribution.';
+const PROJECT_DESCRIPTION = 'AWS CloudFront distribution origin S3 bucket.';
 
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'yicr',

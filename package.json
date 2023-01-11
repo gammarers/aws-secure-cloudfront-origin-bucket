@@ -1,6 +1,6 @@
 {
   "name": "@yicr/secure-cloudfront-origin-bucket",
-  "description": "Auto deploy website to origin S3 bucket and CloudFront distribution.",
+  "description": "AWS CloudFront distribution origin S3 bucket.",
   "repository": {
     "type": "git",
     "url": "https://github.com/yicr/secure-cloudfront-origin-bucket.git"
