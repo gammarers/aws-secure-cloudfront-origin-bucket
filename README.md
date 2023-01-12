@@ -21,9 +21,9 @@ npm install @yicr/secure-cloudfront-origin-bucket
 ```
 
 ```typescript
-import { SecurityGroup } from '@yicr/secure-cloudfront-origin-bucket';
+import { SecureCloudFrontOriginBucket } from '@yicr/secure-cloudfront-origin-bucket';
 
-const oai = new cloudfront.OriginAccessIdentity(this, 'OriginAccessIdentity');
+const oai = new cloudfront.OriginAccessIdentity(stack, 'OriginAccessIdentity');
 
 new SecureCloudFrontOriginBucket(stack, 'SecureCloudFrontOriginBucket', {
   bucketName: 'example-origin-bucket',
