@@ -8,13 +8,10 @@ export interface SecureCloudFrontOriginBucketProps {
   readonly cloudFrontOriginAccessIdentityS3CanonicalUserId: string;
 }
 
-export class SecureCloudFrontOriginBucket extends Construct {
-  public bucket: s3.Bucket;
-  constructor(scope: Construct, id: string, props: SecureCloudFrontOriginBucketProps) {
-    super(scope, id);
+export class SecureCloudFrontOriginBucket extends s3.Bucket {
 
-    // 👇Create S3 Bucket
-    this.bucket = new s3.Bucket(this, 'OriginBucket', {
+  constructor(scope: Construct, id: string, props: SecureCloudFrontOriginBucketProps) {
+    super(scope, id, {
       bucketName: props.bucketName,
       accessControl: s3.BucketAccessControl.PRIVATE,
       removalPolicy: cdk.RemovalPolicy.RETAIN,
@@ -26,7 +23,7 @@ export class SecureCloudFrontOriginBucket extends Construct {
     });
 
     // 👇Allow CloudFront access
-    this.bucket.addToResourcePolicy(new iam.PolicyStatement({
+    this.addToResourcePolicy(new iam.PolicyStatement({
       effect: iam.Effect.ALLOW,
       actions: ['s3:GetObject'],
       principals: [
@@ -34,7 +31,7 @@ export class SecureCloudFrontOriginBucket extends Construct {
           props.cloudFrontOriginAccessIdentityS3CanonicalUserId,
         ),
       ],
-      resources: [`${this.bucket.bucketArn}/*`],
+      resources: [`${this.bucketArn}/*`],
     }));
   }
 }

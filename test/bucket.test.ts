@@ -13,11 +13,11 @@ it('Is Bucket', () => {
     },
   });
 
-  const bucketWrapper = new SecureCloudFrontOriginBucket(stack, 'SecureCloudFrontOriginBucket', {
+  const bucket = new SecureCloudFrontOriginBucket(stack, 'SecureCloudFrontOriginBucket', {
     bucketName: 'origin-bucket',
     cloudFrontOriginAccessIdentityS3CanonicalUserId: '',
   });
-  expect(bucketWrapper.bucket).toBeInstanceOf(s3.Bucket);
+  expect(bucket).toBeInstanceOf(s3.Bucket);
   const assert = Template.fromStack(stack);
   assert.hasResource('AWS::S3::Bucket', {});
 });
