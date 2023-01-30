@@ -15,7 +15,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 's3', 'bucket'],
   npmAccess: javascript.NpmAccess.PUBLIC,
   deps: [
-
+    '@yicr/secure-bucket',
   ],
   // devDeps: [],             /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
