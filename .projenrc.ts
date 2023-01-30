@@ -6,7 +6,7 @@ const PROJECT_DESCRIPTION = 'AWS CloudFront distribution origin S3 bucket.';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'yicr',
   authorAddress: 'yicr@users.noreply.github.com',
-  cdkVersion: '2.43.0',
+  cdkVersion: '2.61.0',
   defaultReleaseBranch: 'main',
   projenrcTs: true,
   name: PROJECT_NAME,
@@ -15,9 +15,13 @@ const project = new awscdk.AwsCdkConstructLibrary({
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 's3', 'bucket'],
   npmAccess: javascript.NpmAccess.PUBLIC,
   deps: [
-
+    '@yicr/secure-bucket@^0.1.1',
   ],
-  // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
+  devDeps: [
+    '@yicr/secure-bucket@0.1.1',
+  ],
+  peerDeps: [
+    '@yicr/secure-bucket@0.1.1',
+  ],
 });
 project.synth();
