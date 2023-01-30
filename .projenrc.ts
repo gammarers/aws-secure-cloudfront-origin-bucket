@@ -1,4 +1,4 @@
-const { awscdk, javascript } = require('projen');
+import { awscdk, javascript } from 'projen';
 
 const PROJECT_NAME = '@yicr/secure-cloudfront-origin-bucket';
 const PROJECT_DESCRIPTION = 'AWS CloudFront distribution origin S3 bucket.';
