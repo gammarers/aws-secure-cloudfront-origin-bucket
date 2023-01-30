@@ -6,7 +6,7 @@ const PROJECT_DESCRIPTION = 'AWS CloudFront distribution origin S3 bucket.';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'yicr',
   authorAddress: 'yicr@users.noreply.github.com',
-  cdkVersion: '2.43.0',
+  cdkVersion: '2.61.0',
   defaultReleaseBranch: 'main',
   projenrcTs: true,
   name: PROJECT_NAME,
