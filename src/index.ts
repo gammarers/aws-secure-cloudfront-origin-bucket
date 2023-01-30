@@ -1,24 +1,18 @@
-import * as cdk from 'aws-cdk-lib';
+import { SecureBucket, SecureBucketEncryption } from '@yicr/secure-bucket';
 import * as iam from 'aws-cdk-lib/aws-iam';
-import * as s3 from 'aws-cdk-lib/aws-s3';
 import { Construct } from 'constructs';
 
 export interface SecureCloudFrontOriginBucketProps {
-  readonly bucketName: string;
+  readonly bucketName?: string;
   readonly cloudFrontOriginAccessIdentityS3CanonicalUserId: string;
 }
 
-export class SecureCloudFrontOriginBucket extends s3.Bucket {
+export class SecureCloudFrontOriginBucket extends SecureBucket {
 
   constructor(scope: Construct, id: string, props: SecureCloudFrontOriginBucketProps) {
     super(scope, id, {
       bucketName: props.bucketName,
-      accessControl: s3.BucketAccessControl.PRIVATE,
-      removalPolicy: cdk.RemovalPolicy.RETAIN,
-      encryption: s3.BucketEncryption.S3_MANAGED, // Notice）Only S3 Manged
-      publicReadAccess: false,
-      blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
-      enforceSSL: true,
+      encryption: SecureBucketEncryption.S3_MANAGED, // Notice）Only S3 Managed
       versioned: false,
     });
 
