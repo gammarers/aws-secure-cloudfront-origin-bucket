@@ -22,7 +22,6 @@
     },
     {
       "name": "@yicr/secure-bucket",
-      "version": "0.1.10",
       "type": "build"
     },
     {
@@ -117,7 +116,6 @@
     },
     {
       "name": "@yicr/secure-bucket",
-      "version": "^0.1.10",
       "type": "peer"
     },
     {
