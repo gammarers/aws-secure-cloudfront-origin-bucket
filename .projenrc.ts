@@ -14,14 +14,20 @@ const project = new awscdk.AwsCdkConstructLibrary({
   repositoryUrl: 'https://github.com/yicr/secure-cloudfront-origin-bucket.git',
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 's3', 'bucket'],
   npmAccess: javascript.NpmAccess.PUBLIC,
-  deps: [
-    '@yicr/secure-bucket@0.1.2',
-  ],
   devDeps: [
-    '@yicr/secure-bucket@0.1.2',
+    '@yicr/secure-bucket@^0.1.10',
   ],
   peerDeps: [
-    '@yicr/secure-bucket@0.1.2',
+    '@yicr/secure-bucket@^0.1.10',
   ],
+  depsUpgradeOptions: {
+    workflowOptions: {
+      labels: ['auto-approve', 'auto-merge'],
+    },
+  },
+  autoApproveOptions: {
+    secret: 'GITHUB_TOKEN',
+    allowedUsernames: ['yicr'],
+  },
 });
 project.synth();
