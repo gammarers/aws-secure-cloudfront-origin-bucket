@@ -1,4 +1,4 @@
-import { awscdk, DependencyType, javascript } from 'projen';
+import { awscdk, javascript } from 'projen';
 
 const PROJECT_NAME = '@yicr/secure-cloudfront-origin-bucket';
 const PROJECT_DESCRIPTION = 'AWS CloudFront distribution origin S3 bucket.';
@@ -14,6 +14,15 @@ const project = new awscdk.AwsCdkConstructLibrary({
   repositoryUrl: 'https://github.com/yicr/secure-cloudfront-origin-bucket.git',
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 's3', 'bucket'],
   npmAccess: javascript.NpmAccess.PUBLIC,
+  deps: [
+    '@yicr/secure-bucket@^0.1.14',
+  ],
+  devDeps: [
+    '@yicr/secure-bucket@0.1.14',
+  ],
+  peerDeps: [
+    '@yicr/secure-bucket@0.1.14',
+  ],
   depsUpgradeOptions: {
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
@@ -23,8 +32,5 @@ const project = new awscdk.AwsCdkConstructLibrary({
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['yicr'],
   },
-});
-project.deps.addDependency('@yicr/secure-bucket', DependencyType.PEER, {
-  resolveVersion: true,
 });
 project.synth();
