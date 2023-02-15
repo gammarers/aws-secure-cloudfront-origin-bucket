@@ -15,13 +15,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 's3', 'bucket'],
   npmAccess: javascript.NpmAccess.PUBLIC,
   deps: [
-    '@yicr/secure-bucket@^0.1.14',
-  ],
-  devDeps: [
-    '@yicr/secure-bucket@0.1.14',
+    '@yicr/secure-bucket',
   ],
   peerDeps: [
-    '@yicr/secure-bucket@0.1.14',
+    '@yicr/secure-bucket',
   ],
   depsUpgradeOptions: {
     workflowOptions: {

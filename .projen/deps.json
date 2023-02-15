@@ -21,11 +21,6 @@
       "type": "build"
     },
     {
-      "name": "@yicr/secure-bucket",
-      "version": "0.1.14",
-      "type": "build"
-    },
-    {
       "name": "aws-cdk-lib",
       "version": "2.61.0",
       "type": "build"
@@ -117,7 +112,6 @@
     },
     {
       "name": "@yicr/secure-bucket",
-      "version": "0.1.14",
       "type": "peer"
     },
     {
@@ -132,7 +126,6 @@
     },
     {
       "name": "@yicr/secure-bucket",
-      "version": "^0.1.14",
       "type": "runtime"
     }
   ],
