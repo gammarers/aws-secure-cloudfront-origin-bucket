@@ -1,4 +1,4 @@
-import { SecureBucket, SecureBucketEncryption } from '@yicr/aws-secure-bucket';
+import { SecureBucket, SecureBucketEncryption } from '@gammarer/aws-secure-bucket';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import { Construct } from 'constructs';
 

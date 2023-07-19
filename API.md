@@ -7,21 +7,27 @@ An AWS CDK construct library to create secure S3 buckets for CloudFront origin.
 ### TypeScript
 
 ```shell
-npm install @yicr/aws-secure-cloudfront-origin-bucket
-```
-or
-```shell
-yarn add @yicr/aws-secure-cloudfront-origin-bucket
+npm install @gammarer/aws-secure-cloudfront-origin-bucket
+# or
+yarn add @gammarer/aws-secure-cloudfront-origin-bucket
 ```
 
-## Example(TypeScript)
+### Python
 
 ```shell
-npm install @yicr/aws-secure-cloudfront-origin-bucket
+pip install gammarer.aws-secure-cloudfront-origin-bucket
+```
+
+## Example
+
+### TypeScript
+
+```shell
+npm install @gammarer/aws-secure-cloudfront-origin-bucket
 ```
 
 ```typescript
-import { SecureCloudFrontOriginBucket } from '@yicr/aws-secure-cloudfront-origin-bucket';
+import { SecureCloudFrontOriginBucket } from '@gammarer/aws-secure-cloudfront-origin-bucket';
 
 const oai = new cloudfront.OriginAccessIdentity(stack, 'OriginAccessIdentity');
 
@@ -39,39 +45,39 @@ This project is licensed under the Apache-2.0 License.
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### SecureCloudFrontOriginBucket <a name="SecureCloudFrontOriginBucket" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket"></a>
+### SecureCloudFrontOriginBucket <a name="SecureCloudFrontOriginBucket" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket"></a>
 
-#### Initializers <a name="Initializers" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer"></a>
+#### Initializers <a name="Initializers" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer"></a>
 
 ```typescript
-import { SecureCloudFrontOriginBucket } from '@yicr/aws-secure-cloudfront-origin-bucket'
+import { SecureCloudFrontOriginBucket } from '@gammarer/aws-secure-cloudfront-origin-bucket'
 
 new SecureCloudFrontOriginBucket(scope: Construct, id: string, props: SecureCloudFrontOriginBucketProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.props">props</a></code> | <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps">SecureCloudFrontOriginBucketProps</a></code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.props">props</a></code> | <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps">SecureCloudFrontOriginBucketProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps">SecureCloudFrontOriginBucketProps</a>
+- *Type:* <a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps">SecureCloudFrontOriginBucketProps</a>
 
 ---
 
@@ -79,36 +85,36 @@ new SecureCloudFrontOriginBucket(scope: Construct, id: string, props: SecureClou
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.toString">toString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addEventNotification">addEventNotification</a></code> | Adds a bucket notification event destination. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectCreatedNotification">addObjectCreatedNotification</a></code> | Subscribes a destination to receive notifications when an object is created in the bucket. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectRemovedNotification">addObjectRemovedNotification</a></code> | Subscribes a destination to receive notifications when an object is removed from the bucket. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addToResourcePolicy">addToResourcePolicy</a></code> | Adds a statement to the resource policy for a principal (i.e. account/role/service) to perform actions on this bucket and/or its contents. Use `bucketArn` and `arnForObjects(keys)` to obtain ARNs for this bucket or objects. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.arnForObjects">arnForObjects</a></code> | Returns an ARN that represents all objects within the bucket that match the key pattern specified. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.enableEventBridgeNotification">enableEventBridgeNotification</a></code> | Enables event bridge notification, causing all events below to be sent to EventBridge:. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantDelete">grantDelete</a></code> | Grants s3:DeleteObject* permission to an IAM principal for objects in this bucket. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPublicAccess">grantPublicAccess</a></code> | Allows unrestricted access to objects from this bucket. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPut">grantPut</a></code> | Grants s3:PutObject* and s3:Abort* permissions for this bucket to an IAM principal. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPutAcl">grantPutAcl</a></code> | Grant the given IAM identity permissions to modify the ACLs of objects in the given Bucket. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantRead">grantRead</a></code> | Grant read permissions for this bucket and it's contents to an IAM principal (Role/Group/User). |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantReadWrite">grantReadWrite</a></code> | Grants read/write permissions for this bucket and it's contents to an IAM principal (Role/Group/User). |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantWrite">grantWrite</a></code> | Grant write permissions to this bucket to an IAM principal. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailEvent">onCloudTrailEvent</a></code> | Define a CloudWatch event that triggers when something happens to this repository. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailPutObject">onCloudTrailPutObject</a></code> | Defines an AWS CloudWatch event that triggers when an object is uploaded to the specified paths (keys) in this bucket using the PutObject API call. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailWriteObject">onCloudTrailWriteObject</a></code> | Defines an AWS CloudWatch event that triggers when an object at the specified paths (keys) in this bucket are written to. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.s3UrlForObject">s3UrlForObject</a></code> | The S3 URL of an S3 object. For example:. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.transferAccelerationUrlForObject">transferAccelerationUrlForObject</a></code> | The https Transfer Acceleration URL of an S3 object. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.urlForObject">urlForObject</a></code> | The https URL of an S3 object. Specify `regional: false` at the options for non-regional URLs. For example:. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.virtualHostedUrlForObject">virtualHostedUrlForObject</a></code> | The virtual hosted-style URL of an S3 object. Specify `regional: false` at the options for non-regional URL. For example:. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addCorsRule">addCorsRule</a></code> | Adds a cross-origin access configuration for objects in an Amazon S3 bucket. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addInventory">addInventory</a></code> | Add an inventory configuration. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addLifecycleRule">addLifecycleRule</a></code> | Add a lifecycle rule to the bucket. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addMetric">addMetric</a></code> | Adds a metrics configuration for the CloudWatch request metrics from the bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addEventNotification">addEventNotification</a></code> | Adds a bucket notification event destination. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectCreatedNotification">addObjectCreatedNotification</a></code> | Subscribes a destination to receive notifications when an object is created in the bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectRemovedNotification">addObjectRemovedNotification</a></code> | Subscribes a destination to receive notifications when an object is removed from the bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addToResourcePolicy">addToResourcePolicy</a></code> | Adds a statement to the resource policy for a principal (i.e. account/role/service) to perform actions on this bucket and/or its contents. Use `bucketArn` and `arnForObjects(keys)` to obtain ARNs for this bucket or objects. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.arnForObjects">arnForObjects</a></code> | Returns an ARN that represents all objects within the bucket that match the key pattern specified. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.enableEventBridgeNotification">enableEventBridgeNotification</a></code> | Enables event bridge notification, causing all events below to be sent to EventBridge:. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantDelete">grantDelete</a></code> | Grants s3:DeleteObject* permission to an IAM principal for objects in this bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPublicAccess">grantPublicAccess</a></code> | Allows unrestricted access to objects from this bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPut">grantPut</a></code> | Grants s3:PutObject* and s3:Abort* permissions for this bucket to an IAM principal. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPutAcl">grantPutAcl</a></code> | Grant the given IAM identity permissions to modify the ACLs of objects in the given Bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantRead">grantRead</a></code> | Grant read permissions for this bucket and it's contents to an IAM principal (Role/Group/User). |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantReadWrite">grantReadWrite</a></code> | Grants read/write permissions for this bucket and it's contents to an IAM principal (Role/Group/User). |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantWrite">grantWrite</a></code> | Grant write permissions to this bucket to an IAM principal. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailEvent">onCloudTrailEvent</a></code> | Define a CloudWatch event that triggers when something happens to this repository. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailPutObject">onCloudTrailPutObject</a></code> | Defines an AWS CloudWatch event that triggers when an object is uploaded to the specified paths (keys) in this bucket using the PutObject API call. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailWriteObject">onCloudTrailWriteObject</a></code> | Defines an AWS CloudWatch event that triggers when an object at the specified paths (keys) in this bucket are written to. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.s3UrlForObject">s3UrlForObject</a></code> | The S3 URL of an S3 object. For example:. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.transferAccelerationUrlForObject">transferAccelerationUrlForObject</a></code> | The https Transfer Acceleration URL of an S3 object. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.urlForObject">urlForObject</a></code> | The https URL of an S3 object. Specify `regional: false` at the options for non-regional URLs. For example:. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.virtualHostedUrlForObject">virtualHostedUrlForObject</a></code> | The virtual hosted-style URL of an S3 object. Specify `regional: false` at the options for non-regional URL. For example:. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addCorsRule">addCorsRule</a></code> | Adds a cross-origin access configuration for objects in an Amazon S3 bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addInventory">addInventory</a></code> | Add an inventory configuration. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addLifecycleRule">addLifecycleRule</a></code> | Add a lifecycle rule to the bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addMetric">addMetric</a></code> | Adds a metrics configuration for the CloudWatch request metrics from the bucket. |
 
 ---
 
-##### `toString` <a name="toString" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.toString"></a>
+##### `toString` <a name="toString" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.toString"></a>
 
 ```typescript
 public toString(): string
@@ -116,7 +122,7 @@ public toString(): string
 
 Returns a string representation of this construct.
 
-##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.applyRemovalPolicy"></a>
+##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.applyRemovalPolicy"></a>
 
 ```typescript
 public applyRemovalPolicy(policy: RemovalPolicy): void
@@ -132,13 +138,13 @@ to be replaced.
 The resource can be deleted (`RemovalPolicy.DESTROY`), or left in your AWS
 account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
 
-###### `policy`<sup>Required</sup> <a name="policy" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.applyRemovalPolicy.parameter.policy"></a>
+###### `policy`<sup>Required</sup> <a name="policy" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.applyRemovalPolicy.parameter.policy"></a>
 
 - *Type:* aws-cdk-lib.RemovalPolicy
 
 ---
 
-##### `addEventNotification` <a name="addEventNotification" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addEventNotification"></a>
+##### `addEventNotification` <a name="addEventNotification" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addEventNotification"></a>
 
 ```typescript
 public addEventNotification(event: EventType, dest: IBucketNotificationDestination, filters: NotificationKeyFilter): void
@@ -157,7 +163,7 @@ Adds a bucket notification event destination.
 ```
 
 
-###### `event`<sup>Required</sup> <a name="event" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addEventNotification.parameter.event"></a>
+###### `event`<sup>Required</sup> <a name="event" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addEventNotification.parameter.event"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.EventType
 
@@ -165,7 +171,7 @@ The event to trigger the notification.
 
 ---
 
-###### `dest`<sup>Required</sup> <a name="dest" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addEventNotification.parameter.dest"></a>
+###### `dest`<sup>Required</sup> <a name="dest" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addEventNotification.parameter.dest"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.IBucketNotificationDestination
 
@@ -173,7 +179,7 @@ The notification destination (Lambda, SNS Topic or SQS Queue).
 
 ---
 
-###### `filters`<sup>Required</sup> <a name="filters" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addEventNotification.parameter.filters"></a>
+###### `filters`<sup>Required</sup> <a name="filters" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addEventNotification.parameter.filters"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.NotificationKeyFilter
 
@@ -185,7 +191,7 @@ for details about allowed filter rules.
 
 ---
 
-##### `addObjectCreatedNotification` <a name="addObjectCreatedNotification" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectCreatedNotification"></a>
+##### `addObjectCreatedNotification` <a name="addObjectCreatedNotification" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectCreatedNotification"></a>
 
 ```typescript
 public addObjectCreatedNotification(dest: IBucketNotificationDestination, filters: NotificationKeyFilter): void
@@ -196,7 +202,7 @@ Subscribes a destination to receive notifications when an object is created in t
 This is identical to calling
 `onEvent(EventType.OBJECT_CREATED)`.
 
-###### `dest`<sup>Required</sup> <a name="dest" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectCreatedNotification.parameter.dest"></a>
+###### `dest`<sup>Required</sup> <a name="dest" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectCreatedNotification.parameter.dest"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.IBucketNotificationDestination
 
@@ -204,7 +210,7 @@ The notification destination (see onEvent).
 
 ---
 
-###### `filters`<sup>Required</sup> <a name="filters" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectCreatedNotification.parameter.filters"></a>
+###### `filters`<sup>Required</sup> <a name="filters" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectCreatedNotification.parameter.filters"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.NotificationKeyFilter
 
@@ -212,7 +218,7 @@ Filters (see onEvent).
 
 ---
 
-##### `addObjectRemovedNotification` <a name="addObjectRemovedNotification" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectRemovedNotification"></a>
+##### `addObjectRemovedNotification` <a name="addObjectRemovedNotification" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectRemovedNotification"></a>
 
 ```typescript
 public addObjectRemovedNotification(dest: IBucketNotificationDestination, filters: NotificationKeyFilter): void
@@ -223,7 +229,7 @@ Subscribes a destination to receive notifications when an object is removed from
 This is identical to calling
 `onEvent(EventType.OBJECT_REMOVED)`.
 
-###### `dest`<sup>Required</sup> <a name="dest" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectRemovedNotification.parameter.dest"></a>
+###### `dest`<sup>Required</sup> <a name="dest" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectRemovedNotification.parameter.dest"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.IBucketNotificationDestination
 
@@ -231,7 +237,7 @@ The notification destination (see onEvent).
 
 ---
 
-###### `filters`<sup>Required</sup> <a name="filters" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectRemovedNotification.parameter.filters"></a>
+###### `filters`<sup>Required</sup> <a name="filters" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addObjectRemovedNotification.parameter.filters"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.NotificationKeyFilter
 
@@ -239,7 +245,7 @@ Filters (see onEvent).
 
 ---
 
-##### `addToResourcePolicy` <a name="addToResourcePolicy" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addToResourcePolicy"></a>
+##### `addToResourcePolicy` <a name="addToResourcePolicy" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addToResourcePolicy"></a>
 
 ```typescript
 public addToResourcePolicy(permission: PolicyStatement): AddToResourcePolicyResult
@@ -253,7 +259,7 @@ it's not possible to tell whether the bucket already has a policy
 attached, let alone to re-use that policy to add more statements to it.
 So it's safest to do nothing in these cases.
 
-###### `permission`<sup>Required</sup> <a name="permission" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addToResourcePolicy.parameter.permission"></a>
+###### `permission`<sup>Required</sup> <a name="permission" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addToResourcePolicy.parameter.permission"></a>
 
 - *Type:* aws-cdk-lib.aws_iam.PolicyStatement
 
@@ -261,7 +267,7 @@ the policy statement to be added to the bucket's policy.
 
 ---
 
-##### `arnForObjects` <a name="arnForObjects" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.arnForObjects"></a>
+##### `arnForObjects` <a name="arnForObjects" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.arnForObjects"></a>
 
 ```typescript
 public arnForObjects(keyPattern: string): string
@@ -275,13 +281,13 @@ If you need to specify a keyPattern with multiple components, concatenate them i
 
    arnForObjects(`home/${team}/${user}/*`)
 
-###### `keyPattern`<sup>Required</sup> <a name="keyPattern" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.arnForObjects.parameter.keyPattern"></a>
+###### `keyPattern`<sup>Required</sup> <a name="keyPattern" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.arnForObjects.parameter.keyPattern"></a>
 
 - *Type:* string
 
 ---
 
-##### `enableEventBridgeNotification` <a name="enableEventBridgeNotification" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.enableEventBridgeNotification"></a>
+##### `enableEventBridgeNotification` <a name="enableEventBridgeNotification" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.enableEventBridgeNotification"></a>
 
 ```typescript
 public enableEventBridgeNotification(): void
@@ -300,7 +306,7 @@ Object Deleted (DeleteObject)
 - Object Tags Added
 - Object Tags Deleted
 
-##### `grantDelete` <a name="grantDelete" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantDelete"></a>
+##### `grantDelete` <a name="grantDelete" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantDelete"></a>
 
 ```typescript
 public grantDelete(identity: IGrantable, objectsKeyPattern?: any): Grant
@@ -308,7 +314,7 @@ public grantDelete(identity: IGrantable, objectsKeyPattern?: any): Grant
 
 Grants s3:DeleteObject* permission to an IAM principal for objects in this bucket.
 
-###### `identity`<sup>Required</sup> <a name="identity" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantDelete.parameter.identity"></a>
+###### `identity`<sup>Required</sup> <a name="identity" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantDelete.parameter.identity"></a>
 
 - *Type:* aws-cdk-lib.aws_iam.IGrantable
 
@@ -316,7 +322,7 @@ The principal.
 
 ---
 
-###### `objectsKeyPattern`<sup>Optional</sup> <a name="objectsKeyPattern" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantDelete.parameter.objectsKeyPattern"></a>
+###### `objectsKeyPattern`<sup>Optional</sup> <a name="objectsKeyPattern" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantDelete.parameter.objectsKeyPattern"></a>
 
 - *Type:* any
 
@@ -324,7 +330,7 @@ Restrict the permission to a certain key pattern (default '*').
 
 ---
 
-##### `grantPublicAccess` <a name="grantPublicAccess" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPublicAccess"></a>
+##### `grantPublicAccess` <a name="grantPublicAccess" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPublicAccess"></a>
 
 ```typescript
 public grantPublicAccess(allowedActions: string, keyPrefix?: string): Grant
@@ -351,7 +357,7 @@ Note that if this `IBucket` refers to an existing bucket, possibly not
 managed by CloudFormation, this method will have no effect, since it's
 impossible to modify the policy of an existing bucket.
 
-###### `allowedActions`<sup>Required</sup> <a name="allowedActions" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPublicAccess.parameter.allowedActions"></a>
+###### `allowedActions`<sup>Required</sup> <a name="allowedActions" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPublicAccess.parameter.allowedActions"></a>
 
 - *Type:* string
 
@@ -361,7 +367,7 @@ Default is "s3:GetObject".
 
 ---
 
-###### `keyPrefix`<sup>Optional</sup> <a name="keyPrefix" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPublicAccess.parameter.keyPrefix"></a>
+###### `keyPrefix`<sup>Optional</sup> <a name="keyPrefix" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPublicAccess.parameter.keyPrefix"></a>
 
 - *Type:* string
 
@@ -369,7 +375,7 @@ the prefix of S3 object keys (e.g. `home/*`). Default is "*".
 
 ---
 
-##### `grantPut` <a name="grantPut" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPut"></a>
+##### `grantPut` <a name="grantPut" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPut"></a>
 
 ```typescript
 public grantPut(identity: IGrantable, objectsKeyPattern?: any): Grant
@@ -380,7 +386,7 @@ Grants s3:PutObject* and s3:Abort* permissions for this bucket to an IAM princip
 If encryption is used, permission to use the key to encrypt the contents
 of written files will also be granted to the same principal.
 
-###### `identity`<sup>Required</sup> <a name="identity" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPut.parameter.identity"></a>
+###### `identity`<sup>Required</sup> <a name="identity" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPut.parameter.identity"></a>
 
 - *Type:* aws-cdk-lib.aws_iam.IGrantable
 
@@ -388,7 +394,7 @@ The principal.
 
 ---
 
-###### `objectsKeyPattern`<sup>Optional</sup> <a name="objectsKeyPattern" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPut.parameter.objectsKeyPattern"></a>
+###### `objectsKeyPattern`<sup>Optional</sup> <a name="objectsKeyPattern" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPut.parameter.objectsKeyPattern"></a>
 
 - *Type:* any
 
@@ -396,7 +402,7 @@ Restrict the permission to a certain key pattern (default '*').
 
 ---
 
-##### `grantPutAcl` <a name="grantPutAcl" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPutAcl"></a>
+##### `grantPutAcl` <a name="grantPutAcl" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPutAcl"></a>
 
 ```typescript
 public grantPutAcl(identity: IGrantable, objectsKeyPattern?: string): Grant
@@ -408,19 +414,19 @@ If your application has the '@aws-cdk/aws-s3:grantWriteWithoutAcl' feature flag 
 calling `grantWrite` or `grantReadWrite` no longer grants permissions to modify the ACLs of the objects;
 in this case, if you need to modify object ACLs, call this method explicitly.
 
-###### `identity`<sup>Required</sup> <a name="identity" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPutAcl.parameter.identity"></a>
+###### `identity`<sup>Required</sup> <a name="identity" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPutAcl.parameter.identity"></a>
 
 - *Type:* aws-cdk-lib.aws_iam.IGrantable
 
 ---
 
-###### `objectsKeyPattern`<sup>Optional</sup> <a name="objectsKeyPattern" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPutAcl.parameter.objectsKeyPattern"></a>
+###### `objectsKeyPattern`<sup>Optional</sup> <a name="objectsKeyPattern" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantPutAcl.parameter.objectsKeyPattern"></a>
 
 - *Type:* string
 
 ---
 
-##### `grantRead` <a name="grantRead" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantRead"></a>
+##### `grantRead` <a name="grantRead" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantRead"></a>
 
 ```typescript
 public grantRead(identity: IGrantable, objectsKeyPattern?: any): Grant
@@ -431,7 +437,7 @@ Grant read permissions for this bucket and it's contents to an IAM principal (Ro
 If encryption is used, permission to use the key to decrypt the contents
 of the bucket will also be granted to the same principal.
 
-###### `identity`<sup>Required</sup> <a name="identity" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantRead.parameter.identity"></a>
+###### `identity`<sup>Required</sup> <a name="identity" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantRead.parameter.identity"></a>
 
 - *Type:* aws-cdk-lib.aws_iam.IGrantable
 
@@ -439,7 +445,7 @@ The principal.
 
 ---
 
-###### `objectsKeyPattern`<sup>Optional</sup> <a name="objectsKeyPattern" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantRead.parameter.objectsKeyPattern"></a>
+###### `objectsKeyPattern`<sup>Optional</sup> <a name="objectsKeyPattern" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantRead.parameter.objectsKeyPattern"></a>
 
 - *Type:* any
 
@@ -447,7 +453,7 @@ Restrict the permission to a certain key pattern (default '*').
 
 ---
 
-##### `grantReadWrite` <a name="grantReadWrite" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantReadWrite"></a>
+##### `grantReadWrite` <a name="grantReadWrite" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantReadWrite"></a>
 
 ```typescript
 public grantReadWrite(identity: IGrantable, objectsKeyPattern?: any): Grant
@@ -466,19 +472,19 @@ in the `context` key of your cdk.json file.
 If you've already updated, but still need the principal to have permissions to modify the ACLs,
 use the `grantPutAcl` method.
 
-###### `identity`<sup>Required</sup> <a name="identity" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantReadWrite.parameter.identity"></a>
+###### `identity`<sup>Required</sup> <a name="identity" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantReadWrite.parameter.identity"></a>
 
 - *Type:* aws-cdk-lib.aws_iam.IGrantable
 
 ---
 
-###### `objectsKeyPattern`<sup>Optional</sup> <a name="objectsKeyPattern" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantReadWrite.parameter.objectsKeyPattern"></a>
+###### `objectsKeyPattern`<sup>Optional</sup> <a name="objectsKeyPattern" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantReadWrite.parameter.objectsKeyPattern"></a>
 
 - *Type:* any
 
 ---
 
-##### `grantWrite` <a name="grantWrite" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantWrite"></a>
+##### `grantWrite` <a name="grantWrite" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantWrite"></a>
 
 ```typescript
 public grantWrite(identity: IGrantable, objectsKeyPattern?: any): Grant
@@ -497,19 +503,19 @@ in the `context` key of your cdk.json file.
 If you've already updated, but still need the principal to have permissions to modify the ACLs,
 use the `grantPutAcl` method.
 
-###### `identity`<sup>Required</sup> <a name="identity" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantWrite.parameter.identity"></a>
+###### `identity`<sup>Required</sup> <a name="identity" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantWrite.parameter.identity"></a>
 
 - *Type:* aws-cdk-lib.aws_iam.IGrantable
 
 ---
 
-###### `objectsKeyPattern`<sup>Optional</sup> <a name="objectsKeyPattern" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantWrite.parameter.objectsKeyPattern"></a>
+###### `objectsKeyPattern`<sup>Optional</sup> <a name="objectsKeyPattern" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantWrite.parameter.objectsKeyPattern"></a>
 
 - *Type:* any
 
 ---
 
-##### `onCloudTrailEvent` <a name="onCloudTrailEvent" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailEvent"></a>
+##### `onCloudTrailEvent` <a name="onCloudTrailEvent" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailEvent"></a>
 
 ```typescript
 public onCloudTrailEvent(id: string, options?: OnCloudTrailBucketEventOptions): Rule
@@ -520,7 +526,7 @@ Define a CloudWatch event that triggers when something happens to this repositor
 Requires that there exists at least one CloudTrail Trail in your account
 that captures the event. This method will not create the Trail.
 
-###### `id`<sup>Required</sup> <a name="id" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailEvent.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailEvent.parameter.id"></a>
 
 - *Type:* string
 
@@ -528,7 +534,7 @@ The id of the rule.
 
 ---
 
-###### `options`<sup>Optional</sup> <a name="options" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailEvent.parameter.options"></a>
+###### `options`<sup>Optional</sup> <a name="options" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailEvent.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.OnCloudTrailBucketEventOptions
 
@@ -536,7 +542,7 @@ Options for adding the rule.
 
 ---
 
-##### `onCloudTrailPutObject` <a name="onCloudTrailPutObject" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailPutObject"></a>
+##### `onCloudTrailPutObject` <a name="onCloudTrailPutObject" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailPutObject"></a>
 
 ```typescript
 public onCloudTrailPutObject(id: string, options?: OnCloudTrailBucketEventOptions): Rule
@@ -551,7 +557,7 @@ so using `onCloudTrailWriteObject` may be preferable.
 Requires that there exists at least one CloudTrail Trail in your account
 that captures the event. This method will not create the Trail.
 
-###### `id`<sup>Required</sup> <a name="id" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailPutObject.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailPutObject.parameter.id"></a>
 
 - *Type:* string
 
@@ -559,7 +565,7 @@ The id of the rule.
 
 ---
 
-###### `options`<sup>Optional</sup> <a name="options" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailPutObject.parameter.options"></a>
+###### `options`<sup>Optional</sup> <a name="options" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailPutObject.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.OnCloudTrailBucketEventOptions
 
@@ -567,7 +573,7 @@ Options for adding the rule.
 
 ---
 
-##### `onCloudTrailWriteObject` <a name="onCloudTrailWriteObject" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailWriteObject"></a>
+##### `onCloudTrailWriteObject` <a name="onCloudTrailWriteObject" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailWriteObject"></a>
 
 ```typescript
 public onCloudTrailWriteObject(id: string, options?: OnCloudTrailBucketEventOptions): Rule
@@ -585,7 +591,7 @@ so using this method may be preferable to `onCloudTrailPutObject`.
 Requires that there exists at least one CloudTrail Trail in your account
 that captures the event. This method will not create the Trail.
 
-###### `id`<sup>Required</sup> <a name="id" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailWriteObject.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailWriteObject.parameter.id"></a>
 
 - *Type:* string
 
@@ -593,7 +599,7 @@ The id of the rule.
 
 ---
 
-###### `options`<sup>Optional</sup> <a name="options" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailWriteObject.parameter.options"></a>
+###### `options`<sup>Optional</sup> <a name="options" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.onCloudTrailWriteObject.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.OnCloudTrailBucketEventOptions
 
@@ -601,7 +607,7 @@ Options for adding the rule.
 
 ---
 
-##### `s3UrlForObject` <a name="s3UrlForObject" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.s3UrlForObject"></a>
+##### `s3UrlForObject` <a name="s3UrlForObject" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.s3UrlForObject"></a>
 
 ```typescript
 public s3UrlForObject(key?: string): string
@@ -612,7 +618,7 @@ The S3 URL of an S3 object. For example:.
 `s3://onlybucket`
 - `s3://bucket/key`
 
-###### `key`<sup>Optional</sup> <a name="key" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.s3UrlForObject.parameter.key"></a>
+###### `key`<sup>Optional</sup> <a name="key" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.s3UrlForObject.parameter.key"></a>
 
 - *Type:* string
 
@@ -623,7 +629,7 @@ bucket is returned.
 
 ---
 
-##### `transferAccelerationUrlForObject` <a name="transferAccelerationUrlForObject" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.transferAccelerationUrlForObject"></a>
+##### `transferAccelerationUrlForObject` <a name="transferAccelerationUrlForObject" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.transferAccelerationUrlForObject"></a>
 
 ```typescript
 public transferAccelerationUrlForObject(key?: string, options?: TransferAccelerationUrlOptions): string
@@ -637,7 +643,7 @@ for dual-stack endpoint (connect to the bucket over IPv6). For example:
 - `https://bucket.s3-accelerate.amazonaws.com`
 - `https://bucket.s3-accelerate.amazonaws.com/key`
 
-###### `key`<sup>Optional</sup> <a name="key" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.transferAccelerationUrlForObject.parameter.key"></a>
+###### `key`<sup>Optional</sup> <a name="key" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.transferAccelerationUrlForObject.parameter.key"></a>
 
 - *Type:* string
 
@@ -648,7 +654,7 @@ bucket is returned.
 
 ---
 
-###### `options`<sup>Optional</sup> <a name="options" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.transferAccelerationUrlForObject.parameter.options"></a>
+###### `options`<sup>Optional</sup> <a name="options" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.transferAccelerationUrlForObject.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.TransferAccelerationUrlOptions
 
@@ -656,7 +662,7 @@ Options for generating URL.
 
 ---
 
-##### `urlForObject` <a name="urlForObject" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.urlForObject"></a>
+##### `urlForObject` <a name="urlForObject" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.urlForObject"></a>
 
 ```typescript
 public urlForObject(key?: string): string
@@ -668,7 +674,7 @@ The https URL of an S3 object. Specify `regional: false` at the options for non-
 - `https://s3.us-west-1.amazonaws.com/bucket/key`
 - `https://s3.cn-north-1.amazonaws.com.cn/china-bucket/mykey`
 
-###### `key`<sup>Optional</sup> <a name="key" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.urlForObject.parameter.key"></a>
+###### `key`<sup>Optional</sup> <a name="key" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.urlForObject.parameter.key"></a>
 
 - *Type:* string
 
@@ -679,7 +685,7 @@ bucket is returned.
 
 ---
 
-##### `virtualHostedUrlForObject` <a name="virtualHostedUrlForObject" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.virtualHostedUrlForObject"></a>
+##### `virtualHostedUrlForObject` <a name="virtualHostedUrlForObject" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.virtualHostedUrlForObject"></a>
 
 ```typescript
 public virtualHostedUrlForObject(key?: string, options?: VirtualHostedStyleUrlOptions): string
@@ -692,7 +698,7 @@ The virtual hosted-style URL of an S3 object. Specify `regional: false` at the o
 - `https://bucket.s3.amazonaws.com/key`
 - `https://china-bucket.s3.cn-north-1.amazonaws.com.cn/mykey`
 
-###### `key`<sup>Optional</sup> <a name="key" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.virtualHostedUrlForObject.parameter.key"></a>
+###### `key`<sup>Optional</sup> <a name="key" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.virtualHostedUrlForObject.parameter.key"></a>
 
 - *Type:* string
 
@@ -703,7 +709,7 @@ bucket is returned.
 
 ---
 
-###### `options`<sup>Optional</sup> <a name="options" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.virtualHostedUrlForObject.parameter.options"></a>
+###### `options`<sup>Optional</sup> <a name="options" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.virtualHostedUrlForObject.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.VirtualHostedStyleUrlOptions
 
@@ -711,7 +717,7 @@ Options for generating URL.
 
 ---
 
-##### `addCorsRule` <a name="addCorsRule" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addCorsRule"></a>
+##### `addCorsRule` <a name="addCorsRule" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addCorsRule"></a>
 
 ```typescript
 public addCorsRule(rule: CorsRule): void
@@ -719,7 +725,7 @@ public addCorsRule(rule: CorsRule): void
 
 Adds a cross-origin access configuration for objects in an Amazon S3 bucket.
 
-###### `rule`<sup>Required</sup> <a name="rule" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addCorsRule.parameter.rule"></a>
+###### `rule`<sup>Required</sup> <a name="rule" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addCorsRule.parameter.rule"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.CorsRule
 
@@ -727,7 +733,7 @@ The CORS configuration rule to add.
 
 ---
 
-##### `addInventory` <a name="addInventory" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addInventory"></a>
+##### `addInventory` <a name="addInventory" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addInventory"></a>
 
 ```typescript
 public addInventory(inventory: Inventory): void
@@ -735,7 +741,7 @@ public addInventory(inventory: Inventory): void
 
 Add an inventory configuration.
 
-###### `inventory`<sup>Required</sup> <a name="inventory" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addInventory.parameter.inventory"></a>
+###### `inventory`<sup>Required</sup> <a name="inventory" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addInventory.parameter.inventory"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.Inventory
 
@@ -743,7 +749,7 @@ configuration to add.
 
 ---
 
-##### `addLifecycleRule` <a name="addLifecycleRule" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addLifecycleRule"></a>
+##### `addLifecycleRule` <a name="addLifecycleRule" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addLifecycleRule"></a>
 
 ```typescript
 public addLifecycleRule(rule: LifecycleRule): void
@@ -751,7 +757,7 @@ public addLifecycleRule(rule: LifecycleRule): void
 
 Add a lifecycle rule to the bucket.
 
-###### `rule`<sup>Required</sup> <a name="rule" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addLifecycleRule.parameter.rule"></a>
+###### `rule`<sup>Required</sup> <a name="rule" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addLifecycleRule.parameter.rule"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.LifecycleRule
 
@@ -759,7 +765,7 @@ The rule to add.
 
 ---
 
-##### `addMetric` <a name="addMetric" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addMetric"></a>
+##### `addMetric` <a name="addMetric" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addMetric"></a>
 
 ```typescript
 public addMetric(metric: BucketMetrics): void
@@ -767,7 +773,7 @@ public addMetric(metric: BucketMetrics): void
 
 Adds a metrics configuration for the CloudWatch request metrics from the bucket.
 
-###### `metric`<sup>Required</sup> <a name="metric" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addMetric.parameter.metric"></a>
+###### `metric`<sup>Required</sup> <a name="metric" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.addMetric.parameter.metric"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.BucketMetrics
 
@@ -779,28 +785,28 @@ The metric configuration to add.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketArn">fromBucketArn</a></code> | *No description.* |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketAttributes">fromBucketAttributes</a></code> | Creates a Bucket construct that represents an external bucket. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketName">fromBucketName</a></code> | *No description.* |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromCfnBucket">fromCfnBucket</a></code> | Create a mutable `IBucket` based on a low-level `CfnBucket`. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.validateBucketName">validateBucketName</a></code> | Thrown an exception if the given bucket name is not valid. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketArn">fromBucketArn</a></code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketAttributes">fromBucketAttributes</a></code> | Creates a Bucket construct that represents an external bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketName">fromBucketName</a></code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromCfnBucket">fromCfnBucket</a></code> | Create a mutable `IBucket` based on a low-level `CfnBucket`. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.validateBucketName">validateBucketName</a></code> | Thrown an exception if the given bucket name is not valid. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isConstruct"></a>
 
 ```typescript
-import { SecureCloudFrontOriginBucket } from '@yicr/aws-secure-cloudfront-origin-bucket'
+import { SecureCloudFrontOriginBucket } from '@gammarer/aws-secure-cloudfront-origin-bucket'
 
 SecureCloudFrontOriginBucket.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -808,75 +814,75 @@ Any object.
 
 ---
 
-##### `isOwnedResource` <a name="isOwnedResource" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isOwnedResource"></a>
+##### `isOwnedResource` <a name="isOwnedResource" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isOwnedResource"></a>
 
 ```typescript
-import { SecureCloudFrontOriginBucket } from '@yicr/aws-secure-cloudfront-origin-bucket'
+import { SecureCloudFrontOriginBucket } from '@gammarer/aws-secure-cloudfront-origin-bucket'
 
 SecureCloudFrontOriginBucket.isOwnedResource(construct: IConstruct)
 ```
 
 Returns true if the construct was created by CDK, and false otherwise.
 
-###### `construct`<sup>Required</sup> <a name="construct" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isOwnedResource.parameter.construct"></a>
+###### `construct`<sup>Required</sup> <a name="construct" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isOwnedResource.parameter.construct"></a>
 
 - *Type:* constructs.IConstruct
 
 ---
 
-##### `isResource` <a name="isResource" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isResource"></a>
+##### `isResource` <a name="isResource" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isResource"></a>
 
 ```typescript
-import { SecureCloudFrontOriginBucket } from '@yicr/aws-secure-cloudfront-origin-bucket'
+import { SecureCloudFrontOriginBucket } from '@gammarer/aws-secure-cloudfront-origin-bucket'
 
 SecureCloudFrontOriginBucket.isResource(construct: IConstruct)
 ```
 
 Check whether the given construct is a Resource.
 
-###### `construct`<sup>Required</sup> <a name="construct" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isResource.parameter.construct"></a>
+###### `construct`<sup>Required</sup> <a name="construct" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.isResource.parameter.construct"></a>
 
 - *Type:* constructs.IConstruct
 
 ---
 
-##### `fromBucketArn` <a name="fromBucketArn" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketArn"></a>
+##### `fromBucketArn` <a name="fromBucketArn" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketArn"></a>
 
 ```typescript
-import { SecureCloudFrontOriginBucket } from '@yicr/aws-secure-cloudfront-origin-bucket'
+import { SecureCloudFrontOriginBucket } from '@gammarer/aws-secure-cloudfront-origin-bucket'
 
 SecureCloudFrontOriginBucket.fromBucketArn(scope: Construct, id: string, bucketArn: string)
 ```
 
-###### `scope`<sup>Required</sup> <a name="scope" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketArn.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketArn.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-###### `id`<sup>Required</sup> <a name="id" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketArn.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketArn.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-###### `bucketArn`<sup>Required</sup> <a name="bucketArn" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketArn.parameter.bucketArn"></a>
+###### `bucketArn`<sup>Required</sup> <a name="bucketArn" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketArn.parameter.bucketArn"></a>
 
 - *Type:* string
 
 ---
 
-##### `fromBucketAttributes` <a name="fromBucketAttributes" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketAttributes"></a>
+##### `fromBucketAttributes` <a name="fromBucketAttributes" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketAttributes"></a>
 
 ```typescript
-import { SecureCloudFrontOriginBucket } from '@yicr/aws-secure-cloudfront-origin-bucket'
+import { SecureCloudFrontOriginBucket } from '@gammarer/aws-secure-cloudfront-origin-bucket'
 
 SecureCloudFrontOriginBucket.fromBucketAttributes(scope: Construct, id: string, attrs: BucketAttributes)
 ```
 
 Creates a Bucket construct that represents an external bucket.
 
-###### `scope`<sup>Required</sup> <a name="scope" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketAttributes.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketAttributes.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
@@ -884,7 +890,7 @@ The parent creating construct (usually `this`).
 
 ---
 
-###### `id`<sup>Required</sup> <a name="id" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketAttributes.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketAttributes.parameter.id"></a>
 
 - *Type:* string
 
@@ -892,7 +898,7 @@ The construct's name.
 
 ---
 
-###### `attrs`<sup>Required</sup> <a name="attrs" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketAttributes.parameter.attrs"></a>
+###### `attrs`<sup>Required</sup> <a name="attrs" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketAttributes.parameter.attrs"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.BucketAttributes
 
@@ -903,59 +909,59 @@ Can be obtained from a call to
 
 ---
 
-##### `fromBucketName` <a name="fromBucketName" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketName"></a>
+##### `fromBucketName` <a name="fromBucketName" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketName"></a>
 
 ```typescript
-import { SecureCloudFrontOriginBucket } from '@yicr/aws-secure-cloudfront-origin-bucket'
+import { SecureCloudFrontOriginBucket } from '@gammarer/aws-secure-cloudfront-origin-bucket'
 
 SecureCloudFrontOriginBucket.fromBucketName(scope: Construct, id: string, bucketName: string)
 ```
 
-###### `scope`<sup>Required</sup> <a name="scope" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketName.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketName.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-###### `id`<sup>Required</sup> <a name="id" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketName.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketName.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-###### `bucketName`<sup>Required</sup> <a name="bucketName" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketName.parameter.bucketName"></a>
+###### `bucketName`<sup>Required</sup> <a name="bucketName" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromBucketName.parameter.bucketName"></a>
 
 - *Type:* string
 
 ---
 
-##### `fromCfnBucket` <a name="fromCfnBucket" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromCfnBucket"></a>
+##### `fromCfnBucket` <a name="fromCfnBucket" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromCfnBucket"></a>
 
 ```typescript
-import { SecureCloudFrontOriginBucket } from '@yicr/aws-secure-cloudfront-origin-bucket'
+import { SecureCloudFrontOriginBucket } from '@gammarer/aws-secure-cloudfront-origin-bucket'
 
 SecureCloudFrontOriginBucket.fromCfnBucket(cfnBucket: CfnBucket)
 ```
 
 Create a mutable `IBucket` based on a low-level `CfnBucket`.
 
-###### `cfnBucket`<sup>Required</sup> <a name="cfnBucket" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromCfnBucket.parameter.cfnBucket"></a>
+###### `cfnBucket`<sup>Required</sup> <a name="cfnBucket" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.fromCfnBucket.parameter.cfnBucket"></a>
 
 - *Type:* aws-cdk-lib.aws_s3.CfnBucket
 
 ---
 
-##### `validateBucketName` <a name="validateBucketName" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.validateBucketName"></a>
+##### `validateBucketName` <a name="validateBucketName" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.validateBucketName"></a>
 
 ```typescript
-import { SecureCloudFrontOriginBucket } from '@yicr/aws-secure-cloudfront-origin-bucket'
+import { SecureCloudFrontOriginBucket } from '@gammarer/aws-secure-cloudfront-origin-bucket'
 
 SecureCloudFrontOriginBucket.validateBucketName(physicalName: string)
 ```
 
 Thrown an exception if the given bucket name is not valid.
 
-###### `physicalName`<sup>Required</sup> <a name="physicalName" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.validateBucketName.parameter.physicalName"></a>
+###### `physicalName`<sup>Required</sup> <a name="physicalName" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.validateBucketName.parameter.physicalName"></a>
 
 - *Type:* string
 
@@ -967,23 +973,23 @@ name of the bucket.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketArn">bucketArn</a></code> | <code>string</code> | The ARN of the bucket. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketDomainName">bucketDomainName</a></code> | <code>string</code> | The IPv4 DNS name of the specified bucket. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketDualStackDomainName">bucketDualStackDomainName</a></code> | <code>string</code> | The IPv6 DNS name of the specified bucket. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketName">bucketName</a></code> | <code>string</code> | The name of the bucket. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketRegionalDomainName">bucketRegionalDomainName</a></code> | <code>string</code> | The regional domain name of the specified bucket. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketWebsiteDomainName">bucketWebsiteDomainName</a></code> | <code>string</code> | The Domain name of the static website. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketWebsiteUrl">bucketWebsiteUrl</a></code> | <code>string</code> | The URL of the static website. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.encryptionKey">encryptionKey</a></code> | <code>aws-cdk-lib.aws_kms.IKey</code> | Optional KMS encryption key associated with this bucket. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.isWebsite">isWebsite</a></code> | <code>boolean</code> | If this bucket has been configured for static website hosting. |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.policy">policy</a></code> | <code>aws-cdk-lib.aws_s3.BucketPolicy</code> | The resource policy associated with this bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketArn">bucketArn</a></code> | <code>string</code> | The ARN of the bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketDomainName">bucketDomainName</a></code> | <code>string</code> | The IPv4 DNS name of the specified bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketDualStackDomainName">bucketDualStackDomainName</a></code> | <code>string</code> | The IPv6 DNS name of the specified bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketName">bucketName</a></code> | <code>string</code> | The name of the bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketRegionalDomainName">bucketRegionalDomainName</a></code> | <code>string</code> | The regional domain name of the specified bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketWebsiteDomainName">bucketWebsiteDomainName</a></code> | <code>string</code> | The Domain name of the static website. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketWebsiteUrl">bucketWebsiteUrl</a></code> | <code>string</code> | The URL of the static website. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.encryptionKey">encryptionKey</a></code> | <code>aws-cdk-lib.aws_kms.IKey</code> | Optional KMS encryption key associated with this bucket. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.isWebsite">isWebsite</a></code> | <code>boolean</code> | If this bucket has been configured for static website hosting. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.policy">policy</a></code> | <code>aws-cdk-lib.aws_s3.BucketPolicy</code> | The resource policy associated with this bucket. |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -995,7 +1001,7 @@ The tree node.
 
 ---
 
-##### `env`<sup>Required</sup> <a name="env" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.env"></a>
+##### `env`<sup>Required</sup> <a name="env" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.env"></a>
 
 ```typescript
 public readonly env: ResourceEnvironment;
@@ -1014,7 +1020,7 @@ that might be different than the stack they were imported into.
 
 ---
 
-##### `stack`<sup>Required</sup> <a name="stack" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.stack"></a>
+##### `stack`<sup>Required</sup> <a name="stack" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.stack"></a>
 
 ```typescript
 public readonly stack: Stack;
@@ -1026,7 +1032,7 @@ The stack in which this resource is defined.
 
 ---
 
-##### `bucketArn`<sup>Required</sup> <a name="bucketArn" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketArn"></a>
+##### `bucketArn`<sup>Required</sup> <a name="bucketArn" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketArn"></a>
 
 ```typescript
 public readonly bucketArn: string;
@@ -1038,7 +1044,7 @@ The ARN of the bucket.
 
 ---
 
-##### `bucketDomainName`<sup>Required</sup> <a name="bucketDomainName" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketDomainName"></a>
+##### `bucketDomainName`<sup>Required</sup> <a name="bucketDomainName" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketDomainName"></a>
 
 ```typescript
 public readonly bucketDomainName: string;
@@ -1050,7 +1056,7 @@ The IPv4 DNS name of the specified bucket.
 
 ---
 
-##### `bucketDualStackDomainName`<sup>Required</sup> <a name="bucketDualStackDomainName" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketDualStackDomainName"></a>
+##### `bucketDualStackDomainName`<sup>Required</sup> <a name="bucketDualStackDomainName" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketDualStackDomainName"></a>
 
 ```typescript
 public readonly bucketDualStackDomainName: string;
@@ -1062,7 +1068,7 @@ The IPv6 DNS name of the specified bucket.
 
 ---
 
-##### `bucketName`<sup>Required</sup> <a name="bucketName" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketName"></a>
+##### `bucketName`<sup>Required</sup> <a name="bucketName" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketName"></a>
 
 ```typescript
 public readonly bucketName: string;
@@ -1074,7 +1080,7 @@ The name of the bucket.
 
 ---
 
-##### `bucketRegionalDomainName`<sup>Required</sup> <a name="bucketRegionalDomainName" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketRegionalDomainName"></a>
+##### `bucketRegionalDomainName`<sup>Required</sup> <a name="bucketRegionalDomainName" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketRegionalDomainName"></a>
 
 ```typescript
 public readonly bucketRegionalDomainName: string;
@@ -1086,7 +1092,7 @@ The regional domain name of the specified bucket.
 
 ---
 
-##### `bucketWebsiteDomainName`<sup>Required</sup> <a name="bucketWebsiteDomainName" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketWebsiteDomainName"></a>
+##### `bucketWebsiteDomainName`<sup>Required</sup> <a name="bucketWebsiteDomainName" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketWebsiteDomainName"></a>
 
 ```typescript
 public readonly bucketWebsiteDomainName: string;
@@ -1098,7 +1104,7 @@ The Domain name of the static website.
 
 ---
 
-##### `bucketWebsiteUrl`<sup>Required</sup> <a name="bucketWebsiteUrl" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketWebsiteUrl"></a>
+##### `bucketWebsiteUrl`<sup>Required</sup> <a name="bucketWebsiteUrl" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.bucketWebsiteUrl"></a>
 
 ```typescript
 public readonly bucketWebsiteUrl: string;
@@ -1110,7 +1116,7 @@ The URL of the static website.
 
 ---
 
-##### `encryptionKey`<sup>Optional</sup> <a name="encryptionKey" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.encryptionKey"></a>
+##### `encryptionKey`<sup>Optional</sup> <a name="encryptionKey" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.encryptionKey"></a>
 
 ```typescript
 public readonly encryptionKey: IKey;
@@ -1122,7 +1128,7 @@ Optional KMS encryption key associated with this bucket.
 
 ---
 
-##### `isWebsite`<sup>Optional</sup> <a name="isWebsite" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.isWebsite"></a>
+##### `isWebsite`<sup>Optional</sup> <a name="isWebsite" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.isWebsite"></a>
 
 ```typescript
 public readonly isWebsite: boolean;
@@ -1134,7 +1140,7 @@ If this bucket has been configured for static website hosting.
 
 ---
 
-##### `policy`<sup>Optional</sup> <a name="policy" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.policy"></a>
+##### `policy`<sup>Optional</sup> <a name="policy" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.property.policy"></a>
 
 ```typescript
 public readonly policy: BucketPolicy;
@@ -1152,12 +1158,12 @@ first call to addToResourcePolicy(s).
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### SecureCloudFrontOriginBucketProps <a name="SecureCloudFrontOriginBucketProps" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps"></a>
+### SecureCloudFrontOriginBucketProps <a name="SecureCloudFrontOriginBucketProps" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps"></a>
 
-#### Initializer <a name="Initializer" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps.Initializer"></a>
 
 ```typescript
-import { SecureCloudFrontOriginBucketProps } from '@yicr/aws-secure-cloudfront-origin-bucket'
+import { SecureCloudFrontOriginBucketProps } from '@gammarer/aws-secure-cloudfront-origin-bucket'
 
 const secureCloudFrontOriginBucketProps: SecureCloudFrontOriginBucketProps = { ... }
 ```
@@ -1166,12 +1172,12 @@ const secureCloudFrontOriginBucketProps: SecureCloudFrontOriginBucketProps = { .
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps.property.cloudFrontOriginAccessIdentityS3CanonicalUserId">cloudFrontOriginAccessIdentityS3CanonicalUserId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps.property.bucketName">bucketName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps.property.cloudFrontOriginAccessIdentityS3CanonicalUserId">cloudFrontOriginAccessIdentityS3CanonicalUserId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps.property.bucketName">bucketName</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `cloudFrontOriginAccessIdentityS3CanonicalUserId`<sup>Required</sup> <a name="cloudFrontOriginAccessIdentityS3CanonicalUserId" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps.property.cloudFrontOriginAccessIdentityS3CanonicalUserId"></a>
+##### `cloudFrontOriginAccessIdentityS3CanonicalUserId`<sup>Required</sup> <a name="cloudFrontOriginAccessIdentityS3CanonicalUserId" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps.property.cloudFrontOriginAccessIdentityS3CanonicalUserId"></a>
 
 ```typescript
 public readonly cloudFrontOriginAccessIdentityS3CanonicalUserId: string;
@@ -1181,7 +1187,7 @@ public readonly cloudFrontOriginAccessIdentityS3CanonicalUserId: string;
 
 ---
 
-##### `bucketName`<sup>Optional</sup> <a name="bucketName" id="@yicr/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps.property.bucketName"></a>
+##### `bucketName`<sup>Optional</sup> <a name="bucketName" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps.property.bucketName"></a>
 
 ```typescript
 public readonly bucketName: string;

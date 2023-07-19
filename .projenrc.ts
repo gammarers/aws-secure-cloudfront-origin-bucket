@@ -6,16 +6,16 @@ const project = new awscdk.AwsCdkConstructLibrary({
   cdkVersion: '2.61.0',
   defaultReleaseBranch: 'main',
   projenrcTs: true,
-  name: '@yicr/aws-secure-cloudfront-origin-bucket',
+  name: '@gammarer/aws-secure-cloudfront-origin-bucket',
   description: 'AWS CloudFront distribution origin S3 bucket.',
   repositoryUrl: 'https://github.com/yicr/aws-secure-cloudfront-origin-bucket.git',
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 's3', 'bucket'],
   npmAccess: javascript.NpmAccess.PUBLIC,
   deps: [
-    '@yicr/aws-secure-bucket',
+    '@gammarer/aws-secure-bucket',
   ],
   peerDeps: [
-    '@yicr/aws-secure-bucket',
+    '@gammarer/aws-secure-bucket',
   ],
   minNodeVersion: '16.0.0',
   workflowNodeVersion: '16.19.1',
@@ -28,6 +28,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
   autoApproveOptions: {
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['yicr'],
+  },
+  publishToPypi: {
+    distName: 'gammarer.aws-secure-cloudfront-origin-bucket',
+    module: 'gammarer.aws_secure_cloudfront_origin_bucket',
   },
 });
 project.synth();

@@ -7,21 +7,27 @@ An AWS CDK construct library to create secure S3 buckets for CloudFront origin.
 ### TypeScript
 
 ```shell
-npm install @yicr/aws-secure-cloudfront-origin-bucket
-```
-or
-```shell
-yarn add @yicr/aws-secure-cloudfront-origin-bucket
+npm install @gammarer/aws-secure-cloudfront-origin-bucket
+# or
+yarn add @gammarer/aws-secure-cloudfront-origin-bucket
 ```
 
-## Example(TypeScript)
+### Python
 
 ```shell
-npm install @yicr/aws-secure-cloudfront-origin-bucket
+pip install gammarer.aws-secure-cloudfront-origin-bucket
+```
+
+## Example
+
+### TypeScript
+
+```shell
+npm install @gammarer/aws-secure-cloudfront-origin-bucket
 ```
 
 ```typescript
-import { SecureCloudFrontOriginBucket } from '@yicr/aws-secure-cloudfront-origin-bucket';
+import { SecureCloudFrontOriginBucket } from '@gammarer/aws-secure-cloudfront-origin-bucket';
 
 const oai = new cloudfront.OriginAccessIdentity(stack, 'OriginAccessIdentity');
 
