@@ -12,6 +12,12 @@ npm install @gammarer/aws-secure-cloudfront-origin-bucket
 yarn add @gammarer/aws-secure-cloudfront-origin-bucket
 ```
 
+### Python
+
+```shell
+pip install gammarer.aws-secure-cloudfront-origin-bucket
+```
+
 ## Example
 
 ### TypeScript
