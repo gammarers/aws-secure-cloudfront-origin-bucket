@@ -1,5 +1,5 @@
 {
-  "name": "@yicr/aws-secure-cloudfront-origin-bucket",
+  "name": "@gammarer/aws-secure-cloudfront-origin-bucket",
   "description": "AWS CloudFront distribution origin S3 bucket.",
   "repository": {
     "type": "git",
