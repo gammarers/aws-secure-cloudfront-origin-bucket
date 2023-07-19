@@ -29,5 +29,9 @@ const project = new awscdk.AwsCdkConstructLibrary({
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['yicr'],
   },
+  publishToPypi: {
+    distName: 'gammarer.aws-secure-cloudfront-origin-bucket',
+    module: 'gammarer.aws_secure_cloudfront_origin_bucket',
+  },
 });
 project.synth();
