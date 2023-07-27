@@ -24,6 +24,13 @@ Object {
           ],
         },
         "BucketName": "origin-bucket",
+        "OwnershipControls": Object {
+          "Rules": Array [
+            Object {
+              "ObjectOwnership": "BucketOwnerEnforced",
+            },
+          ],
+        },
         "PublicAccessBlockConfiguration": Object {
           "BlockPublicAcls": true,
           "BlockPublicPolicy": true,
