@@ -12,10 +12,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 's3', 'bucket'],
   npmAccess: javascript.NpmAccess.PUBLIC,
   deps: [
-    '@gammarer/aws-secure-bucket',
+    '@gammarer/aws-secure-bucket@^0.11.3',
   ],
   peerDeps: [
-    '@gammarer/aws-secure-bucket',
+    '@gammarer/aws-secure-bucket@^0.11.3',
   ],
   minNodeVersion: '16.0.0',
   workflowNodeVersion: '16.19.1',
