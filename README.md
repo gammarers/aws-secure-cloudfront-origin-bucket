@@ -18,13 +18,18 @@ yarn add @gammarer/aws-secure-cloudfront-origin-bucket
 pip install gammarer.aws-secure-cloudfront-origin-bucket
 ```
 
-## Example
+### Java
 
-### TypeScript
+Add the following to pom.xml:
 
-```shell
-npm install @gammarer/aws-secure-cloudfront-origin-bucket
+```xml
+<dependency>
+  <groupId>com.gammarer</groupId>
+  <artifactId>aws-secure-cloudfront-origin-bucket</artifactId>
+</dependency>
 ```
+
+## Example
 
 ```typescript
 import { SecureCloudFrontOriginBucket } from '@gammarer/aws-secure-cloudfront-origin-bucket';
