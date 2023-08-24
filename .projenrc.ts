@@ -3,7 +3,7 @@ import { awscdk, javascript } from 'projen';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'yicr',
   authorAddress: 'yicr@users.noreply.github.com',
-  cdkVersion: '2.61.0',
+  cdkVersion: '2.80.0',
   defaultReleaseBranch: 'main',
   projenrcTs: true,
   name: '@gammarer/aws-secure-cloudfront-origin-bucket',
