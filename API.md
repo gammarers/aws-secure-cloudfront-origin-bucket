@@ -293,7 +293,7 @@ To represent all keys, specify ``"*"``.
 
 If you need to specify a keyPattern with multiple components, concatenate them into a single string, e.g.:
 
-   arnForObjects(`home/${team}/${user}/*`)
+  arnForObjects(`home/${team}/${user}/*`)
 
 ###### `keyPattern`<sup>Required</sup> <a name="keyPattern" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.arnForObjects.parameter.keyPattern"></a>
 
@@ -364,8 +364,8 @@ The method returns the `iam.Grant` object, which can then be modified
 as needed. For example, you can add a condition that will restrict access only
 to an IPv4 range like this:
 
-     const grant = bucket.grantPublicAccess();
-     grant.resourceStatement!.addCondition(‘IpAddress’, { “aws:SourceIp”: “54.240.143.0/24” });
+    const grant = bucket.grantPublicAccess();
+    grant.resourceStatement!.addCondition(‘IpAddress’, { “aws:SourceIp”: “54.240.143.0/24” });
 
 Note that if this `IBucket` refers to an existing bucket, possibly not
 managed by CloudFormation, this method will have no effect, since it's
@@ -501,7 +501,7 @@ use the `grantPutAcl` method.
 ##### `grantWrite` <a name="grantWrite" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantWrite"></a>
 
 ```typescript
-public grantWrite(identity: IGrantable, objectsKeyPattern?: any): Grant
+public grantWrite(identity: IGrantable, objectsKeyPattern?: any, allowedActionPatterns?: string[]): Grant
 ```
 
 Grant write permissions to this bucket to an IAM principal.
@@ -526,6 +526,12 @@ use the `grantPutAcl` method.
 ###### `objectsKeyPattern`<sup>Optional</sup> <a name="objectsKeyPattern" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantWrite.parameter.objectsKeyPattern"></a>
 
 - *Type:* any
+
+---
+
+###### `allowedActionPatterns`<sup>Optional</sup> <a name="allowedActionPatterns" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.grantWrite.parameter.allowedActionPatterns"></a>
+
+- *Type:* string[]
 
 ---
 
