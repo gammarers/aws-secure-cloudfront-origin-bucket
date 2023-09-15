@@ -27,6 +27,12 @@ yarn add @gammarer/aws-secure-cloudfront-origin-bucket
 pip install gammarer.aws-secure-cloudfront-origin-bucket
 ```
 
+### C# / .NET
+
+```shell
+dotnet add package Gammarer.CDK.AWS.SecureCloudFrontOriginBucket
+```
+
 ### Java
 
 Add the following to pom.xml:
