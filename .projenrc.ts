@@ -13,6 +13,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   description: 'AWS CloudFront distribution origin S3 bucket.',
   repositoryUrl: 'https://github.com/gammarer/aws-secure-cloudfront-origin-bucket.git',
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 's3', 'bucket'],
+  majorVersion: 1,
   npmAccess: javascript.NpmAccess.PUBLIC,
   deps: [
     '@gammarer/aws-secure-bucket@~0.13.0',
