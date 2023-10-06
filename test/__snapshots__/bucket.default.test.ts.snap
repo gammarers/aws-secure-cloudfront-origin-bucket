@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SecureCloudFrontOriginBucket Testing Should match snapshot: bucket 1`] = `
+exports[`SecureCloudFrontOriginBucket default Testing Should match snapshot: bucket 1`] = `
 Object {
   "Parameters": Object {
     "BootstrapVersion": Object {

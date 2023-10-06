@@ -3,7 +3,7 @@ import { Match, Template } from 'aws-cdk-lib/assertions';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import { SecureCloudFrontOriginBucket } from '../src';
 
-describe('SecureCloudFrontOriginBucket Testing', () => {
+describe('SecureCloudFrontOriginBucket default Testing', () => {
 
   const app = new App();
   const stack = new Stack(app, 'TestingStack');
