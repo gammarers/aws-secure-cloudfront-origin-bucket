@@ -5,8 +5,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorAddress: 'yicr@users.noreply.github.com',
   authorOrganization: true,
   cdkVersion: '2.80.0',
-  typescriptVersion: '4.9.x',
-  jsiiVersion: '~5.0.0',
+  typescriptVersion: '5.1.x',
+  jsiiVersion: '5.1.x',
   defaultReleaseBranch: 'main',
   projenrcTs: true,
   name: '@gammarer/aws-secure-cloudfront-origin-bucket',
@@ -16,13 +16,14 @@ const project = new awscdk.AwsCdkConstructLibrary({
   majorVersion: 1,
   npmAccess: javascript.NpmAccess.PUBLIC,
   deps: [
-    '@gammarer/aws-secure-bucket@~1.0.0',
+    '@gammarer/aws-secure-bucket@~1.1.1',
   ],
   peerDeps: [
-    '@gammarer/aws-secure-bucket@~1.0.0',
+    '@gammarer/aws-secure-bucket@~1.1.1',
   ],
   minNodeVersion: '16.0.0',
-  workflowNodeVersion: '18.17.1',
+  workflowNodeVersion: '20.11.0',
+  depsUpgrade: true,
   depsUpgradeOptions: {
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
