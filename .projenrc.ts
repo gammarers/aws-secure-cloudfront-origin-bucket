@@ -15,7 +15,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 's3', 'bucket'],
   majorVersion: 1,
   npmAccess: javascript.NpmAccess.PUBLIC,
-  devDeps: [
+  deps: [
     '@gammarer/aws-secure-bucket@~1.1.1',
   ],
   peerDeps: [
