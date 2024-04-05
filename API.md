@@ -9,14 +9,14 @@
 ```typescript
 import { SecureCloudFrontOriginBucket } from '@gammarer/aws-secure-cloudfront-origin-bucket'
 
-new SecureCloudFrontOriginBucket(scope: Construct, id: string, props: SecureCloudFrontOriginBucketProps)
+new SecureCloudFrontOriginBucket(scope: Construct, id: string, props: SecureCloudFrontOriginAccessControlBucketProps | SecureCloudFrontOriginAccessIdentityBucketProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
 | <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.props">props</a></code> | <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps">SecureCloudFrontOriginBucketProps</a></code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.props">props</a></code> | <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps">SecureCloudFrontOriginAccessControlBucketProps</a> \| <a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps">SecureCloudFrontOriginAccessIdentityBucketProps</a></code> | *No description.* |
 
 ---
 
@@ -34,7 +34,7 @@ new SecureCloudFrontOriginBucket(scope: Construct, id: string, props: SecureClou
 
 ##### `props`<sup>Required</sup> <a name="props" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucket.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps">SecureCloudFrontOriginBucketProps</a>
+- *Type:* <a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps">SecureCloudFrontOriginAccessControlBucketProps</a> | <a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps">SecureCloudFrontOriginAccessIdentityBucketProps</a>
 
 ---
 
@@ -1121,26 +1121,77 @@ first call to addToResourcePolicy(s).
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### SecureCloudFrontOriginBucketProps <a name="SecureCloudFrontOriginBucketProps" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps"></a>
+### SecureCloudFrontOriginAccessControlBucketProps <a name="SecureCloudFrontOriginAccessControlBucketProps" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps"></a>
 
-#### Initializer <a name="Initializer" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.Initializer"></a>
 
 ```typescript
-import { SecureCloudFrontOriginBucketProps } from '@gammarer/aws-secure-cloudfront-origin-bucket'
+import { SecureCloudFrontOriginAccessControlBucketProps } from '@gammarer/aws-secure-cloudfront-origin-bucket'
 
-const secureCloudFrontOriginBucketProps: SecureCloudFrontOriginBucketProps = { ... }
+const secureCloudFrontOriginAccessControlBucketProps: SecureCloudFrontOriginAccessControlBucketProps = { ... }
 ```
 
 #### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps.property.cloudFrontOriginAccessIdentityS3CanonicalUserId">cloudFrontOriginAccessIdentityS3CanonicalUserId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps.property.bucketName">bucketName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.cloudFrontArn">cloudFrontArn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.cloudFrontOriginType">cloudFrontOriginType</a></code> | <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginType">SecureCloudFrontOriginType</a></code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.bucketName">bucketName</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `cloudFrontOriginAccessIdentityS3CanonicalUserId`<sup>Required</sup> <a name="cloudFrontOriginAccessIdentityS3CanonicalUserId" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps.property.cloudFrontOriginAccessIdentityS3CanonicalUserId"></a>
+##### `cloudFrontArn`<sup>Required</sup> <a name="cloudFrontArn" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.cloudFrontArn"></a>
+
+```typescript
+public readonly cloudFrontArn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `cloudFrontOriginType`<sup>Required</sup> <a name="cloudFrontOriginType" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.cloudFrontOriginType"></a>
+
+```typescript
+public readonly cloudFrontOriginType: SecureCloudFrontOriginType;
+```
+
+- *Type:* <a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginType">SecureCloudFrontOriginType</a>
+
+---
+
+##### `bucketName`<sup>Optional</sup> <a name="bucketName" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.bucketName"></a>
+
+```typescript
+public readonly bucketName: string;
+```
+
+- *Type:* string
+
+---
+
+### SecureCloudFrontOriginAccessIdentityBucketProps <a name="SecureCloudFrontOriginAccessIdentityBucketProps" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps"></a>
+
+#### Initializer <a name="Initializer" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.Initializer"></a>
+
+```typescript
+import { SecureCloudFrontOriginAccessIdentityBucketProps } from '@gammarer/aws-secure-cloudfront-origin-bucket'
+
+const secureCloudFrontOriginAccessIdentityBucketProps: SecureCloudFrontOriginAccessIdentityBucketProps = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.cloudFrontOriginAccessIdentityS3CanonicalUserId">cloudFrontOriginAccessIdentityS3CanonicalUserId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.cloudFrontOriginType">cloudFrontOriginType</a></code> | <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginType">SecureCloudFrontOriginType</a></code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.bucketName">bucketName</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `cloudFrontOriginAccessIdentityS3CanonicalUserId`<sup>Required</sup> <a name="cloudFrontOriginAccessIdentityS3CanonicalUserId" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.cloudFrontOriginAccessIdentityS3CanonicalUserId"></a>
 
 ```typescript
 public readonly cloudFrontOriginAccessIdentityS3CanonicalUserId: string;
@@ -1150,7 +1201,17 @@ public readonly cloudFrontOriginAccessIdentityS3CanonicalUserId: string;
 
 ---
 
-##### `bucketName`<sup>Optional</sup> <a name="bucketName" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginBucketProps.property.bucketName"></a>
+##### `cloudFrontOriginType`<sup>Required</sup> <a name="cloudFrontOriginType" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.cloudFrontOriginType"></a>
+
+```typescript
+public readonly cloudFrontOriginType: SecureCloudFrontOriginType;
+```
+
+- *Type:* <a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginType">SecureCloudFrontOriginType</a>
+
+---
+
+##### `bucketName`<sup>Optional</sup> <a name="bucketName" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.bucketName"></a>
 
 ```typescript
 public readonly bucketName: string;
@@ -1161,4 +1222,30 @@ public readonly bucketName: string;
 ---
 
 
+
+## Enums <a name="Enums" id="Enums"></a>
+
+### SecureCloudFrontOriginType <a name="SecureCloudFrontOriginType" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginType"></a>
+
+#### Members <a name="Members" id="Members"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginType.ORIGIN_ACCESS_IDENTITY">ORIGIN_ACCESS_IDENTITY</a></code> | OriginAccessIdentity. |
+| <code><a href="#@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginType.ORIGIN_ACCESS_CONTROL">ORIGIN_ACCESS_CONTROL</a></code> | OriginAccessControl. |
+
+---
+
+##### `ORIGIN_ACCESS_IDENTITY` <a name="ORIGIN_ACCESS_IDENTITY" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginType.ORIGIN_ACCESS_IDENTITY"></a>
+
+OriginAccessIdentity.
+
+---
+
+
+##### `ORIGIN_ACCESS_CONTROL` <a name="ORIGIN_ACCESS_CONTROL" id="@gammarer/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginType.ORIGIN_ACCESS_CONTROL"></a>
+
+OriginAccessControl.
+
+---
 

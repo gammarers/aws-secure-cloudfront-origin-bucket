@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SecureCloudFrontOriginBucket default Testing Should match snapshot: bucket 1`] = `
+exports[`SecureCloudFrontOriginBucket OAI Testing Should match snapshot 1`] = `
 {
   "Parameters": {
     "BootstrapVersion": {
@@ -10,6 +10,40 @@ exports[`SecureCloudFrontOriginBucket default Testing Should match snapshot: buc
     },
   },
   "Resources": {
+    "BucketPolicy37195417": {
+      "Properties": {
+        "Bucket": {
+          "Ref": "TestingBucket7BD4A29B",
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:GetObject",
+              "Effect": "Allow",
+              "Principal": {
+                "CanonicalUser": "CloudFront Origin Access Identity XXXXXXXXXXXXXX",
+              },
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    {
+                      "Fn::GetAtt": [
+                        "TestingBucket7BD4A29B",
+                        "Arn",
+                      ],
+                    },
+                    "/*",
+                  ],
+                ],
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::S3::BucketPolicy",
+    },
     "TestingBucket7BD4A29B": {
       "DeletionPolicy": "Retain",
       "Properties": {
@@ -84,27 +118,6 @@ exports[`SecureCloudFrontOriginBucket default Testing Should match snapshot: buc
                   ],
                 },
               ],
-            },
-            {
-              "Action": "s3:GetObject",
-              "Effect": "Allow",
-              "Principal": {
-                "CanonicalUser": "CloudFront Origin Access Identity XXXXXXXXXXXXXX",
-              },
-              "Resource": {
-                "Fn::Join": [
-                  "",
-                  [
-                    {
-                      "Fn::GetAtt": [
-                        "TestingBucket7BD4A29B",
-                        "Arn",
-                      ],
-                    },
-                    "/*",
-                  ],
-                ],
-              },
             },
           ],
           "Version": "2012-10-17",

@@ -10,7 +10,7 @@
 
 [![View on Construct Hub](https://constructs.dev/badge?package=@gammarer/aws-secure-cloudfront-origin-bucket)](https://constructs.dev/packages/@gammarer/aws-secure-cloudfront-origin-bucket)
 
-An AWS CDK construct library to create secure S3 buckets for CloudFront origin. 
+An AWS CDK construct library to create secure S3 buckets for CloudFront origin.
 
 ## Install
 
@@ -20,6 +20,10 @@ An AWS CDK construct library to create secure S3 buckets for CloudFront origin.
 npm install @gammarer/aws-secure-cloudfront-origin-bucket
 # or
 yarn add @gammarer/aws-secure-cloudfront-origin-bucket
+# or 
+pnpm add @gammarer/aws-secure-cloudfront-origin-bucket
+# or 
+bun add @gammarer/aws-secure-cloudfront-origin-bucket
 ```
 
 ### Python
@@ -47,16 +51,32 @@ Add the following to pom.xml:
 
 ## Example
 
+### for OAI(Origin Access Identity)
+
 ```typescript
-import { SecureCloudFrontOriginBucket } from '@gammarer/aws-secure-cloudfront-origin-bucket';
+import { SecureCloudFrontOriginBucket, SecureCloudFrontOriginType } from '@gammarer/aws-secure-cloudfront-origin-bucket';
 
 const oai = new cloudfront.OriginAccessIdentity(stack, 'OriginAccessIdentity');
 
 new SecureCloudFrontOriginBucket(stack, 'SecureCloudFrontOriginBucket', {
   bucketName: 'example-origin-bucket',
+  cloudFrontOriginType: SecureCloudFrontOriginType.ORIGIN_ACCESS_IDENTITY,
   cloudFrontOriginAccessIdentityS3CanonicalUserId: oai.cloudFrontOriginAccessIdentityS3CanonicalUserId,
 });
+```
 
+### for OAC(Origin Access Control)
+
+```typescript
+import { SecureCloudFrontOriginBucket, SecureCloudFrontOriginType } from '@gammarer/aws-secure-cloudfront-origin-bucket';
+
+declare const s3Bucket: cloudfront.Distribution;
+
+new SecureCloudFrontOriginBucket(stack, 'SecureCloudFrontOriginBucket', {
+  bucketName: 'example-origin-bucket',
+  cloudFrontOriginType: SecureCloudFrontOriginType.ORIGIN_ACCESS_CONTROL,
+  cloudFrontArn: 'arn:aws:cloudfront::123456789:distribution/DISTRIBUTIONID',
+});
 ```
 
 ## License
