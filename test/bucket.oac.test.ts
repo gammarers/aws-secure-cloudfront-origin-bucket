@@ -21,7 +21,7 @@ describe('SecureCloudFrontOriginBucket OAC Testing', () => {
   });
 
   it('Allow from CloudFront Origin Access Control', () => {
-    template.hasResourceProperties('AWS::S3::BucketPolicy',  Match.objectEquals({
+    template.hasResourceProperties('AWS::S3::BucketPolicy', Match.objectEquals({
       Bucket: {
         Ref: Match.stringLikeRegexp('TestingBucket'),
       },
