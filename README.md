@@ -70,12 +70,12 @@ new SecureCloudFrontOriginBucket(stack, 'SecureCloudFrontOriginBucket', {
 ```typescript
 import { SecureCloudFrontOriginBucket, SecureCloudFrontOriginType } from '@gammarer/aws-secure-cloudfront-origin-bucket';
 
-declare const s3Bucket: cloudfront.Distribution;
+declare const distribution: cloudfront.Distribution;
 
 new SecureCloudFrontOriginBucket(stack, 'SecureCloudFrontOriginBucket', {
   bucketName: 'example-origin-bucket',
   cloudFrontOriginType: SecureCloudFrontOriginType.ORIGIN_ACCESS_CONTROL,
-  cloudFrontArn: 'arn:aws:cloudfront::123456789:distribution/DISTRIBUTIONID',
+  cloudFrontArn: `arn:aws:cloudfront::123456789:distribution/${distribution.distributionId}`,
 });
 ```
 
