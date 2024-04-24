@@ -35,8 +35,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
     allowedUsernames: ['yicr'],
   },
   publishToPypi: {
-    distName: 'gammarer.aws-secure-cloudfront-origin-bucket',
-    module: 'gammarer.aws_secure_cloudfront_origin_bucket',
+    distName: 'gammarers.aws-secure-cloudfront-origin-bucket',
+    module: 'gammarers.aws_secure_cloudfront_origin_bucket',
   },
   publishToMaven: {
     mavenGroupId: 'com.gammarer',
