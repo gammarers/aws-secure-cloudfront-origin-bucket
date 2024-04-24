@@ -137,8 +137,8 @@
         "module": "gammarers.aws_secure_cloudfront_origin_bucket"
       },
       "dotnet": {
-        "namespace": "Gammarer.CDK.AWS",
-        "packageId": "Gammarer.CDK.AWS.SecureCloudFrontOriginBucket"
+        "namespace": "Gammarers.CDK.AWS",
+        "packageId": "Gammarers.CDK.AWS.SecureCloudFrontOriginBucket"
       }
     },
     "tsc": {

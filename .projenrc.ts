@@ -39,8 +39,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
     module: 'gammarers.aws_secure_cloudfront_origin_bucket',
   },
   publishToNuget: {
-    dotNetNamespace: 'Gammarer.CDK.AWS',
-    packageId: 'Gammarer.CDK.AWS.SecureCloudFrontOriginBucket',
+    dotNetNamespace: 'Gammarers.CDK.AWS',
+    packageId: 'Gammarers.CDK.AWS.SecureCloudFrontOriginBucket',
   },
 });
 project.synth();
