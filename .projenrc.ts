@@ -9,17 +9,17 @@ const project = new awscdk.AwsCdkConstructLibrary({
   jsiiVersion: '5.2.x',
   defaultReleaseBranch: 'main',
   projenrcTs: true,
-  name: '@gammarer/aws-secure-cloudfront-origin-bucket',
+  name: '@gammarers/aws-secure-cloudfront-origin-bucket',
   description: 'AWS CloudFront distribution origin S3 bucket.',
-  repositoryUrl: 'https://github.com/gammarer/aws-secure-cloudfront-origin-bucket.git',
+  repositoryUrl: 'https://github.com/gammarers/aws-secure-cloudfront-origin-bucket.git',
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 's3', 'bucket'],
   majorVersion: 1,
   npmAccess: javascript.NpmAccess.PUBLIC,
   deps: [
-    '@gammarer/aws-secure-bucket@~1.1.1',
+    '@gammarers/aws-secure-bucket@~1.3.1',
   ],
   peerDeps: [
-    '@gammarer/aws-secure-bucket@~1.1.1',
+    '@gammarers/aws-secure-bucket@~1.3.1',
   ],
   minNodeVersion: '16.0.0',
   workflowNodeVersion: '20.11.0',
@@ -35,18 +35,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
     allowedUsernames: ['yicr'],
   },
   publishToPypi: {
-    distName: 'gammarer.aws-secure-cloudfront-origin-bucket',
-    module: 'gammarer.aws_secure_cloudfront_origin_bucket',
-  },
-  publishToMaven: {
-    mavenGroupId: 'com.gammarer',
-    javaPackage: 'com.gammarer.cdk.aws.secure_cloudfront_origin_bucket',
-    mavenArtifactId: 'aws-secure-cloudfront-origin-bucket',
-    mavenEndpoint: 'https://s01.oss.sonatype.org',
+    distName: 'gammarers.aws-secure-cloudfront-origin-bucket',
+    module: 'gammarers.aws_secure_cloudfront_origin_bucket',
   },
   publishToNuget: {
-    dotNetNamespace: 'Gammarer.CDK.AWS',
-    packageId: 'Gammarer.CDK.AWS.SecureCloudFrontOriginBucket',
+    dotNetNamespace: 'Gammarers.CDK.AWS',
+    packageId: 'Gammarers.CDK.AWS.SecureCloudFrontOriginBucket',
   },
 });
 project.synth();
