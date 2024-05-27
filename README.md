@@ -15,13 +15,24 @@ An AWS CDK construct library to create secure S3 buckets for CloudFront origin.
 
 ### TypeScript
 
+#### install by npm
+
 ```shell
 npm install @gammarers/aws-secure-cloudfront-origin-bucket
-# or
+```
+#### install by yarn
+
+```shell
 yarn add @gammarers/aws-secure-cloudfront-origin-bucket
-# or 
+```
+#### install by pnpm
+
+```shell
 pnpm add @gammarers/aws-secure-cloudfront-origin-bucket
-# or 
+```
+#### install by bun
+
+```shell
 bun add @gammarers/aws-secure-cloudfront-origin-bucket
 ```
 
