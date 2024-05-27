@@ -5,8 +5,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorAddress: 'yicr@users.noreply.github.com',
   authorOrganization: true,
   cdkVersion: '2.80.0',
-  typescriptVersion: '5.2.x',
-  jsiiVersion: '5.2.x',
+  typescriptVersion: '5.3.x',
+  jsiiVersion: '5.3.x',
   defaultReleaseBranch: 'main',
   projenrcTs: true,
   name: '@gammarers/aws-secure-cloudfront-origin-bucket',
@@ -16,10 +16,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
   majorVersion: 1,
   npmAccess: javascript.NpmAccess.PUBLIC,
   deps: [
-    '@gammarers/aws-secure-bucket@~1.3.1',
+    '@gammarers/aws-secure-bucket@~1.4.1',
   ],
   peerDeps: [
-    '@gammarers/aws-secure-bucket@~1.3.1',
+    '@gammarers/aws-secure-bucket@~1.4.1',
   ],
   minNodeVersion: '16.0.0',
   workflowNodeVersion: '20.11.0',
