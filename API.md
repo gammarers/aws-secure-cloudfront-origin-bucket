@@ -1135,9 +1135,454 @@ const secureCloudFrontOriginAccessControlBucketProps: SecureCloudFrontOriginAcce
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.accessControl">accessControl</a></code> | <code>aws-cdk-lib.aws_s3.BucketAccessControl</code> | Specifies a canned ACL that grants predefined permissions to the bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.autoDeleteObjects">autoDeleteObjects</a></code> | <code>boolean</code> | Whether all objects should be automatically deleted when the bucket is removed from the stack or when the stack is deleted. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.blockPublicAccess">blockPublicAccess</a></code> | <code>aws-cdk-lib.aws_s3.BlockPublicAccess</code> | The block public access configuration of this bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.bucketKeyEnabled">bucketKeyEnabled</a></code> | <code>boolean</code> | Whether Amazon S3 should use its own intermediary key to generate data keys. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.bucketName">bucketName</a></code> | <code>string</code> | Physical name of this bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.cors">cors</a></code> | <code>aws-cdk-lib.aws_s3.CorsRule[]</code> | The CORS configuration of this bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.encryption">encryption</a></code> | <code>aws-cdk-lib.aws_s3.BucketEncryption</code> | The kind of server-side encryption to apply to this bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.encryptionKey">encryptionKey</a></code> | <code>aws-cdk-lib.aws_kms.IKey</code> | External KMS key to use for bucket encryption. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.enforceSSL">enforceSSL</a></code> | <code>boolean</code> | Enforces SSL for requests. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.eventBridgeEnabled">eventBridgeEnabled</a></code> | <code>boolean</code> | Whether this bucket should send notifications to Amazon EventBridge or not. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.intelligentTieringConfigurations">intelligentTieringConfigurations</a></code> | <code>aws-cdk-lib.aws_s3.IntelligentTieringConfiguration[]</code> | Inteligent Tiering Configurations. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.inventories">inventories</a></code> | <code>aws-cdk-lib.aws_s3.Inventory[]</code> | The inventory configuration of the bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.lifecycleRules">lifecycleRules</a></code> | <code>aws-cdk-lib.aws_s3.LifecycleRule[]</code> | Rules that define how Amazon S3 manages objects during their lifetime. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.metrics">metrics</a></code> | <code>aws-cdk-lib.aws_s3.BucketMetrics[]</code> | The metrics configuration of this bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.notificationsHandlerRole">notificationsHandlerRole</a></code> | <code>aws-cdk-lib.aws_iam.IRole</code> | The role to be used by the notifications handler. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.objectLockDefaultRetention">objectLockDefaultRetention</a></code> | <code>aws-cdk-lib.aws_s3.ObjectLockRetention</code> | The default retention mode and rules for S3 Object Lock. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.objectLockEnabled">objectLockEnabled</a></code> | <code>boolean</code> | Enable object lock on the bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.objectOwnership">objectOwnership</a></code> | <code>aws-cdk-lib.aws_s3.ObjectOwnership</code> | The objectOwnership of the bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.publicReadAccess">publicReadAccess</a></code> | <code>boolean</code> | Grants public read access to all objects in the bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.removalPolicy">removalPolicy</a></code> | <code>aws-cdk-lib.RemovalPolicy</code> | Policy to apply when the bucket is removed from this stack. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.serverAccessLogsBucket">serverAccessLogsBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | Destination bucket for the server access logs. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.serverAccessLogsPrefix">serverAccessLogsPrefix</a></code> | <code>string</code> | Optional log file prefix to use for the bucket's access logs. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.transferAcceleration">transferAcceleration</a></code> | <code>boolean</code> | Whether this bucket should have transfer acceleration turned on or not. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.versioned">versioned</a></code> | <code>boolean</code> | Whether this bucket should have versioning turned on or not. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.websiteErrorDocument">websiteErrorDocument</a></code> | <code>string</code> | The name of the error document (e.g. "404.html") for the website. `websiteIndexDocument` must also be set if this is set. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.websiteIndexDocument">websiteIndexDocument</a></code> | <code>string</code> | The name of the index document (e.g. "index.html") for the website. Enables static website hosting for this bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.websiteRedirect">websiteRedirect</a></code> | <code>aws-cdk-lib.aws_s3.RedirectTarget</code> | Specifies the redirect behavior of all requests to a website endpoint of a bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.websiteRoutingRules">websiteRoutingRules</a></code> | <code>aws-cdk-lib.aws_s3.RoutingRule[]</code> | Rules that define when a redirect is applied and the redirect behavior. |
 | <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.cloudFrontArn">cloudFrontArn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.cloudFrontOriginType">cloudFrontOriginType</a></code> | <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginType">SecureCloudFrontOriginType</a></code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.bucketName">bucketName</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `accessControl`<sup>Optional</sup> <a name="accessControl" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.accessControl"></a>
+
+```typescript
+public readonly accessControl: BucketAccessControl;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.BucketAccessControl
+- *Default:* BucketAccessControl.PRIVATE
+
+Specifies a canned ACL that grants predefined permissions to the bucket.
+
+---
+
+##### `autoDeleteObjects`<sup>Optional</sup> <a name="autoDeleteObjects" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.autoDeleteObjects"></a>
+
+```typescript
+public readonly autoDeleteObjects: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Whether all objects should be automatically deleted when the bucket is removed from the stack or when the stack is deleted.
+
+Requires the `removalPolicy` to be set to `RemovalPolicy.DESTROY`.
+
+**Warning** if you have deployed a bucket with `autoDeleteObjects: true`,
+switching this to `false` in a CDK version *before* `1.126.0` will lead to
+all objects in the bucket being deleted. Be sure to update your bucket resources
+by deploying with CDK version `1.126.0` or later **before** switching this value to `false`.
+
+---
+
+##### `blockPublicAccess`<sup>Optional</sup> <a name="blockPublicAccess" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.blockPublicAccess"></a>
+
+```typescript
+public readonly blockPublicAccess: BlockPublicAccess;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.BlockPublicAccess
+- *Default:* CloudFormation defaults will apply. New buckets and objects don't allow public access, but users can modify bucket policies or object permissions to allow public access
+
+The block public access configuration of this bucket.
+
+> [https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html)
+
+---
+
+##### `bucketKeyEnabled`<sup>Optional</sup> <a name="bucketKeyEnabled" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.bucketKeyEnabled"></a>
+
+```typescript
+public readonly bucketKeyEnabled: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Whether Amazon S3 should use its own intermediary key to generate data keys.
+
+Only relevant when using KMS for encryption.
+
+- If not enabled, every object GET and PUT will cause an API call to KMS (with the
+  attendant cost implications of that).
+- If enabled, S3 will use its own time-limited key instead.
+
+Only relevant, when Encryption is set to `BucketEncryption.KMS` or `BucketEncryption.KMS_MANAGED`.
+
+---
+
+##### `bucketName`<sup>Optional</sup> <a name="bucketName" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.bucketName"></a>
+
+```typescript
+public readonly bucketName: string;
+```
+
+- *Type:* string
+- *Default:* Assigned by CloudFormation (recommended).
+
+Physical name of this bucket.
+
+---
+
+##### `cors`<sup>Optional</sup> <a name="cors" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.cors"></a>
+
+```typescript
+public readonly cors: CorsRule[];
+```
+
+- *Type:* aws-cdk-lib.aws_s3.CorsRule[]
+- *Default:* No CORS configuration.
+
+The CORS configuration of this bucket.
+
+> [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-cors.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-cors.html)
+
+---
+
+##### `encryption`<sup>Optional</sup> <a name="encryption" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.encryption"></a>
+
+```typescript
+public readonly encryption: BucketEncryption;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.BucketEncryption
+- *Default:* `Kms` if `encryptionKey` is specified, or `Managed` otherwise.
+
+The kind of server-side encryption to apply to this bucket.
+
+If you choose KMS, you can specify a KMS key via `encryptionKey`. If
+encryption key is not specified, a key will automatically be created.
+
+---
+
+##### `encryptionKey`<sup>Optional</sup> <a name="encryptionKey" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.encryptionKey"></a>
+
+```typescript
+public readonly encryptionKey: IKey;
+```
+
+- *Type:* aws-cdk-lib.aws_kms.IKey
+- *Default:* If encryption is set to "Kms" and this property is undefined, a new KMS key will be created and associated with this bucket.
+
+External KMS key to use for bucket encryption.
+
+The 'encryption' property must be either not specified or set to "Kms".
+An error will be emitted if encryption is set to "Unencrypted" or
+"Managed".
+
+---
+
+##### `enforceSSL`<sup>Optional</sup> <a name="enforceSSL" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.enforceSSL"></a>
+
+```typescript
+public readonly enforceSSL: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Enforces SSL for requests.
+
+S3.5 of the AWS Foundational Security Best Practices Regarding S3.
+
+> [https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-ssl-requests-only.html](https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-ssl-requests-only.html)
+
+---
+
+##### `eventBridgeEnabled`<sup>Optional</sup> <a name="eventBridgeEnabled" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.eventBridgeEnabled"></a>
+
+```typescript
+public readonly eventBridgeEnabled: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Whether this bucket should send notifications to Amazon EventBridge or not.
+
+---
+
+##### `intelligentTieringConfigurations`<sup>Optional</sup> <a name="intelligentTieringConfigurations" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.intelligentTieringConfigurations"></a>
+
+```typescript
+public readonly intelligentTieringConfigurations: IntelligentTieringConfiguration[];
+```
+
+- *Type:* aws-cdk-lib.aws_s3.IntelligentTieringConfiguration[]
+- *Default:* No Intelligent Tiiering Configurations.
+
+Inteligent Tiering Configurations.
+
+> [https://docs.aws.amazon.com/AmazonS3/latest/userguide/intelligent-tiering.html](https://docs.aws.amazon.com/AmazonS3/latest/userguide/intelligent-tiering.html)
+
+---
+
+##### `inventories`<sup>Optional</sup> <a name="inventories" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.inventories"></a>
+
+```typescript
+public readonly inventories: Inventory[];
+```
+
+- *Type:* aws-cdk-lib.aws_s3.Inventory[]
+- *Default:* No inventory configuration
+
+The inventory configuration of the bucket.
+
+> [https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html)
+
+---
+
+##### `lifecycleRules`<sup>Optional</sup> <a name="lifecycleRules" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.lifecycleRules"></a>
+
+```typescript
+public readonly lifecycleRules: LifecycleRule[];
+```
+
+- *Type:* aws-cdk-lib.aws_s3.LifecycleRule[]
+- *Default:* No lifecycle rules.
+
+Rules that define how Amazon S3 manages objects during their lifetime.
+
+---
+
+##### `metrics`<sup>Optional</sup> <a name="metrics" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.metrics"></a>
+
+```typescript
+public readonly metrics: BucketMetrics[];
+```
+
+- *Type:* aws-cdk-lib.aws_s3.BucketMetrics[]
+- *Default:* No metrics configuration.
+
+The metrics configuration of this bucket.
+
+> [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metricsconfiguration.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metricsconfiguration.html)
+
+---
+
+##### `notificationsHandlerRole`<sup>Optional</sup> <a name="notificationsHandlerRole" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.notificationsHandlerRole"></a>
+
+```typescript
+public readonly notificationsHandlerRole: IRole;
+```
+
+- *Type:* aws-cdk-lib.aws_iam.IRole
+- *Default:* a new role will be created.
+
+The role to be used by the notifications handler.
+
+---
+
+##### `objectLockDefaultRetention`<sup>Optional</sup> <a name="objectLockDefaultRetention" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.objectLockDefaultRetention"></a>
+
+```typescript
+public readonly objectLockDefaultRetention: ObjectLockRetention;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.ObjectLockRetention
+- *Default:* no default retention period
+
+The default retention mode and rules for S3 Object Lock.
+
+Default retention can be configured after a bucket is created if the bucket already
+has object lock enabled. Enabling object lock for existing buckets is not supported.
+
+> [https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html#object-lock-bucket-config-enable](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html#object-lock-bucket-config-enable)
+
+---
+
+##### `objectLockEnabled`<sup>Optional</sup> <a name="objectLockEnabled" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.objectLockEnabled"></a>
+
+```typescript
+public readonly objectLockEnabled: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false, unless objectLockDefaultRetention is set (then, true)
+
+Enable object lock on the bucket.
+
+Enabling object lock for existing buckets is not supported. Object lock must be
+enabled when the bucket is created.
+
+> [https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html#object-lock-bucket-config-enable](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html#object-lock-bucket-config-enable)
+
+---
+
+##### `objectOwnership`<sup>Optional</sup> <a name="objectOwnership" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.objectOwnership"></a>
+
+```typescript
+public readonly objectOwnership: ObjectOwnership;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.ObjectOwnership
+- *Default:* No ObjectOwnership configuration, uploading account will own the object.
+
+The objectOwnership of the bucket.
+
+> [https://docs.aws.amazon.com/AmazonS3/latest/dev/about-object-ownership.html](https://docs.aws.amazon.com/AmazonS3/latest/dev/about-object-ownership.html)
+
+---
+
+##### `publicReadAccess`<sup>Optional</sup> <a name="publicReadAccess" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.publicReadAccess"></a>
+
+```typescript
+public readonly publicReadAccess: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Grants public read access to all objects in the bucket.
+
+Similar to calling `bucket.grantPublicAccess()`
+
+---
+
+##### `removalPolicy`<sup>Optional</sup> <a name="removalPolicy" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.removalPolicy"></a>
+
+```typescript
+public readonly removalPolicy: RemovalPolicy;
+```
+
+- *Type:* aws-cdk-lib.RemovalPolicy
+- *Default:* The bucket will be orphaned.
+
+Policy to apply when the bucket is removed from this stack.
+
+---
+
+##### `serverAccessLogsBucket`<sup>Optional</sup> <a name="serverAccessLogsBucket" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.serverAccessLogsBucket"></a>
+
+```typescript
+public readonly serverAccessLogsBucket: IBucket;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.IBucket
+- *Default:* If "serverAccessLogsPrefix" undefined - access logs disabled, otherwise - log to current bucket.
+
+Destination bucket for the server access logs.
+
+---
+
+##### `serverAccessLogsPrefix`<sup>Optional</sup> <a name="serverAccessLogsPrefix" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.serverAccessLogsPrefix"></a>
+
+```typescript
+public readonly serverAccessLogsPrefix: string;
+```
+
+- *Type:* string
+- *Default:* No log file prefix
+
+Optional log file prefix to use for the bucket's access logs.
+
+If defined without "serverAccessLogsBucket", enables access logs to current bucket with this prefix.
+
+---
+
+##### `transferAcceleration`<sup>Optional</sup> <a name="transferAcceleration" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.transferAcceleration"></a>
+
+```typescript
+public readonly transferAcceleration: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Whether this bucket should have transfer acceleration turned on or not.
+
+---
+
+##### `versioned`<sup>Optional</sup> <a name="versioned" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.versioned"></a>
+
+```typescript
+public readonly versioned: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false (unless object lock is enabled, then true)
+
+Whether this bucket should have versioning turned on or not.
+
+---
+
+##### `websiteErrorDocument`<sup>Optional</sup> <a name="websiteErrorDocument" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.websiteErrorDocument"></a>
+
+```typescript
+public readonly websiteErrorDocument: string;
+```
+
+- *Type:* string
+- *Default:* No error document.
+
+The name of the error document (e.g. "404.html") for the website. `websiteIndexDocument` must also be set if this is set.
+
+---
+
+##### `websiteIndexDocument`<sup>Optional</sup> <a name="websiteIndexDocument" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.websiteIndexDocument"></a>
+
+```typescript
+public readonly websiteIndexDocument: string;
+```
+
+- *Type:* string
+- *Default:* No index document.
+
+The name of the index document (e.g. "index.html") for the website. Enables static website hosting for this bucket.
+
+---
+
+##### `websiteRedirect`<sup>Optional</sup> <a name="websiteRedirect" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.websiteRedirect"></a>
+
+```typescript
+public readonly websiteRedirect: RedirectTarget;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.RedirectTarget
+- *Default:* No redirection.
+
+Specifies the redirect behavior of all requests to a website endpoint of a bucket.
+
+If you specify this property, you can't specify "websiteIndexDocument", "websiteErrorDocument" nor , "websiteRoutingRules".
+
+---
+
+##### `websiteRoutingRules`<sup>Optional</sup> <a name="websiteRoutingRules" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.websiteRoutingRules"></a>
+
+```typescript
+public readonly websiteRoutingRules: RoutingRule[];
+```
+
+- *Type:* aws-cdk-lib.aws_s3.RoutingRule[]
+- *Default:* No redirection rules.
+
+Rules that define when a redirect is applied and the redirect behavior.
 
 ---
 
@@ -1161,16 +1606,6 @@ public readonly cloudFrontOriginType: SecureCloudFrontOriginType;
 
 ---
 
-##### `bucketName`<sup>Optional</sup> <a name="bucketName" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessControlBucketProps.property.bucketName"></a>
-
-```typescript
-public readonly bucketName: string;
-```
-
-- *Type:* string
-
----
-
 ### SecureCloudFrontOriginAccessIdentityBucketProps <a name="SecureCloudFrontOriginAccessIdentityBucketProps" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps"></a>
 
 #### Initializer <a name="Initializer" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.Initializer"></a>
@@ -1185,9 +1620,454 @@ const secureCloudFrontOriginAccessIdentityBucketProps: SecureCloudFrontOriginAcc
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.accessControl">accessControl</a></code> | <code>aws-cdk-lib.aws_s3.BucketAccessControl</code> | Specifies a canned ACL that grants predefined permissions to the bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.autoDeleteObjects">autoDeleteObjects</a></code> | <code>boolean</code> | Whether all objects should be automatically deleted when the bucket is removed from the stack or when the stack is deleted. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.blockPublicAccess">blockPublicAccess</a></code> | <code>aws-cdk-lib.aws_s3.BlockPublicAccess</code> | The block public access configuration of this bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.bucketKeyEnabled">bucketKeyEnabled</a></code> | <code>boolean</code> | Whether Amazon S3 should use its own intermediary key to generate data keys. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.bucketName">bucketName</a></code> | <code>string</code> | Physical name of this bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.cors">cors</a></code> | <code>aws-cdk-lib.aws_s3.CorsRule[]</code> | The CORS configuration of this bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.encryption">encryption</a></code> | <code>aws-cdk-lib.aws_s3.BucketEncryption</code> | The kind of server-side encryption to apply to this bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.encryptionKey">encryptionKey</a></code> | <code>aws-cdk-lib.aws_kms.IKey</code> | External KMS key to use for bucket encryption. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.enforceSSL">enforceSSL</a></code> | <code>boolean</code> | Enforces SSL for requests. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.eventBridgeEnabled">eventBridgeEnabled</a></code> | <code>boolean</code> | Whether this bucket should send notifications to Amazon EventBridge or not. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.intelligentTieringConfigurations">intelligentTieringConfigurations</a></code> | <code>aws-cdk-lib.aws_s3.IntelligentTieringConfiguration[]</code> | Inteligent Tiering Configurations. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.inventories">inventories</a></code> | <code>aws-cdk-lib.aws_s3.Inventory[]</code> | The inventory configuration of the bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.lifecycleRules">lifecycleRules</a></code> | <code>aws-cdk-lib.aws_s3.LifecycleRule[]</code> | Rules that define how Amazon S3 manages objects during their lifetime. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.metrics">metrics</a></code> | <code>aws-cdk-lib.aws_s3.BucketMetrics[]</code> | The metrics configuration of this bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.notificationsHandlerRole">notificationsHandlerRole</a></code> | <code>aws-cdk-lib.aws_iam.IRole</code> | The role to be used by the notifications handler. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.objectLockDefaultRetention">objectLockDefaultRetention</a></code> | <code>aws-cdk-lib.aws_s3.ObjectLockRetention</code> | The default retention mode and rules for S3 Object Lock. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.objectLockEnabled">objectLockEnabled</a></code> | <code>boolean</code> | Enable object lock on the bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.objectOwnership">objectOwnership</a></code> | <code>aws-cdk-lib.aws_s3.ObjectOwnership</code> | The objectOwnership of the bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.publicReadAccess">publicReadAccess</a></code> | <code>boolean</code> | Grants public read access to all objects in the bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.removalPolicy">removalPolicy</a></code> | <code>aws-cdk-lib.RemovalPolicy</code> | Policy to apply when the bucket is removed from this stack. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.serverAccessLogsBucket">serverAccessLogsBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | Destination bucket for the server access logs. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.serverAccessLogsPrefix">serverAccessLogsPrefix</a></code> | <code>string</code> | Optional log file prefix to use for the bucket's access logs. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.transferAcceleration">transferAcceleration</a></code> | <code>boolean</code> | Whether this bucket should have transfer acceleration turned on or not. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.versioned">versioned</a></code> | <code>boolean</code> | Whether this bucket should have versioning turned on or not. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.websiteErrorDocument">websiteErrorDocument</a></code> | <code>string</code> | The name of the error document (e.g. "404.html") for the website. `websiteIndexDocument` must also be set if this is set. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.websiteIndexDocument">websiteIndexDocument</a></code> | <code>string</code> | The name of the index document (e.g. "index.html") for the website. Enables static website hosting for this bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.websiteRedirect">websiteRedirect</a></code> | <code>aws-cdk-lib.aws_s3.RedirectTarget</code> | Specifies the redirect behavior of all requests to a website endpoint of a bucket. |
+| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.websiteRoutingRules">websiteRoutingRules</a></code> | <code>aws-cdk-lib.aws_s3.RoutingRule[]</code> | Rules that define when a redirect is applied and the redirect behavior. |
 | <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.cloudFrontOriginAccessIdentityS3CanonicalUserId">cloudFrontOriginAccessIdentityS3CanonicalUserId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.cloudFrontOriginType">cloudFrontOriginType</a></code> | <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginType">SecureCloudFrontOriginType</a></code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.bucketName">bucketName</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `accessControl`<sup>Optional</sup> <a name="accessControl" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.accessControl"></a>
+
+```typescript
+public readonly accessControl: BucketAccessControl;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.BucketAccessControl
+- *Default:* BucketAccessControl.PRIVATE
+
+Specifies a canned ACL that grants predefined permissions to the bucket.
+
+---
+
+##### `autoDeleteObjects`<sup>Optional</sup> <a name="autoDeleteObjects" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.autoDeleteObjects"></a>
+
+```typescript
+public readonly autoDeleteObjects: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Whether all objects should be automatically deleted when the bucket is removed from the stack or when the stack is deleted.
+
+Requires the `removalPolicy` to be set to `RemovalPolicy.DESTROY`.
+
+**Warning** if you have deployed a bucket with `autoDeleteObjects: true`,
+switching this to `false` in a CDK version *before* `1.126.0` will lead to
+all objects in the bucket being deleted. Be sure to update your bucket resources
+by deploying with CDK version `1.126.0` or later **before** switching this value to `false`.
+
+---
+
+##### `blockPublicAccess`<sup>Optional</sup> <a name="blockPublicAccess" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.blockPublicAccess"></a>
+
+```typescript
+public readonly blockPublicAccess: BlockPublicAccess;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.BlockPublicAccess
+- *Default:* CloudFormation defaults will apply. New buckets and objects don't allow public access, but users can modify bucket policies or object permissions to allow public access
+
+The block public access configuration of this bucket.
+
+> [https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html)
+
+---
+
+##### `bucketKeyEnabled`<sup>Optional</sup> <a name="bucketKeyEnabled" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.bucketKeyEnabled"></a>
+
+```typescript
+public readonly bucketKeyEnabled: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Whether Amazon S3 should use its own intermediary key to generate data keys.
+
+Only relevant when using KMS for encryption.
+
+- If not enabled, every object GET and PUT will cause an API call to KMS (with the
+  attendant cost implications of that).
+- If enabled, S3 will use its own time-limited key instead.
+
+Only relevant, when Encryption is set to `BucketEncryption.KMS` or `BucketEncryption.KMS_MANAGED`.
+
+---
+
+##### `bucketName`<sup>Optional</sup> <a name="bucketName" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.bucketName"></a>
+
+```typescript
+public readonly bucketName: string;
+```
+
+- *Type:* string
+- *Default:* Assigned by CloudFormation (recommended).
+
+Physical name of this bucket.
+
+---
+
+##### `cors`<sup>Optional</sup> <a name="cors" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.cors"></a>
+
+```typescript
+public readonly cors: CorsRule[];
+```
+
+- *Type:* aws-cdk-lib.aws_s3.CorsRule[]
+- *Default:* No CORS configuration.
+
+The CORS configuration of this bucket.
+
+> [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-cors.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-cors.html)
+
+---
+
+##### `encryption`<sup>Optional</sup> <a name="encryption" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.encryption"></a>
+
+```typescript
+public readonly encryption: BucketEncryption;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.BucketEncryption
+- *Default:* `Kms` if `encryptionKey` is specified, or `Managed` otherwise.
+
+The kind of server-side encryption to apply to this bucket.
+
+If you choose KMS, you can specify a KMS key via `encryptionKey`. If
+encryption key is not specified, a key will automatically be created.
+
+---
+
+##### `encryptionKey`<sup>Optional</sup> <a name="encryptionKey" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.encryptionKey"></a>
+
+```typescript
+public readonly encryptionKey: IKey;
+```
+
+- *Type:* aws-cdk-lib.aws_kms.IKey
+- *Default:* If encryption is set to "Kms" and this property is undefined, a new KMS key will be created and associated with this bucket.
+
+External KMS key to use for bucket encryption.
+
+The 'encryption' property must be either not specified or set to "Kms".
+An error will be emitted if encryption is set to "Unencrypted" or
+"Managed".
+
+---
+
+##### `enforceSSL`<sup>Optional</sup> <a name="enforceSSL" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.enforceSSL"></a>
+
+```typescript
+public readonly enforceSSL: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Enforces SSL for requests.
+
+S3.5 of the AWS Foundational Security Best Practices Regarding S3.
+
+> [https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-ssl-requests-only.html](https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-ssl-requests-only.html)
+
+---
+
+##### `eventBridgeEnabled`<sup>Optional</sup> <a name="eventBridgeEnabled" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.eventBridgeEnabled"></a>
+
+```typescript
+public readonly eventBridgeEnabled: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Whether this bucket should send notifications to Amazon EventBridge or not.
+
+---
+
+##### `intelligentTieringConfigurations`<sup>Optional</sup> <a name="intelligentTieringConfigurations" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.intelligentTieringConfigurations"></a>
+
+```typescript
+public readonly intelligentTieringConfigurations: IntelligentTieringConfiguration[];
+```
+
+- *Type:* aws-cdk-lib.aws_s3.IntelligentTieringConfiguration[]
+- *Default:* No Intelligent Tiiering Configurations.
+
+Inteligent Tiering Configurations.
+
+> [https://docs.aws.amazon.com/AmazonS3/latest/userguide/intelligent-tiering.html](https://docs.aws.amazon.com/AmazonS3/latest/userguide/intelligent-tiering.html)
+
+---
+
+##### `inventories`<sup>Optional</sup> <a name="inventories" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.inventories"></a>
+
+```typescript
+public readonly inventories: Inventory[];
+```
+
+- *Type:* aws-cdk-lib.aws_s3.Inventory[]
+- *Default:* No inventory configuration
+
+The inventory configuration of the bucket.
+
+> [https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html)
+
+---
+
+##### `lifecycleRules`<sup>Optional</sup> <a name="lifecycleRules" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.lifecycleRules"></a>
+
+```typescript
+public readonly lifecycleRules: LifecycleRule[];
+```
+
+- *Type:* aws-cdk-lib.aws_s3.LifecycleRule[]
+- *Default:* No lifecycle rules.
+
+Rules that define how Amazon S3 manages objects during their lifetime.
+
+---
+
+##### `metrics`<sup>Optional</sup> <a name="metrics" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.metrics"></a>
+
+```typescript
+public readonly metrics: BucketMetrics[];
+```
+
+- *Type:* aws-cdk-lib.aws_s3.BucketMetrics[]
+- *Default:* No metrics configuration.
+
+The metrics configuration of this bucket.
+
+> [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metricsconfiguration.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metricsconfiguration.html)
+
+---
+
+##### `notificationsHandlerRole`<sup>Optional</sup> <a name="notificationsHandlerRole" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.notificationsHandlerRole"></a>
+
+```typescript
+public readonly notificationsHandlerRole: IRole;
+```
+
+- *Type:* aws-cdk-lib.aws_iam.IRole
+- *Default:* a new role will be created.
+
+The role to be used by the notifications handler.
+
+---
+
+##### `objectLockDefaultRetention`<sup>Optional</sup> <a name="objectLockDefaultRetention" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.objectLockDefaultRetention"></a>
+
+```typescript
+public readonly objectLockDefaultRetention: ObjectLockRetention;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.ObjectLockRetention
+- *Default:* no default retention period
+
+The default retention mode and rules for S3 Object Lock.
+
+Default retention can be configured after a bucket is created if the bucket already
+has object lock enabled. Enabling object lock for existing buckets is not supported.
+
+> [https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html#object-lock-bucket-config-enable](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html#object-lock-bucket-config-enable)
+
+---
+
+##### `objectLockEnabled`<sup>Optional</sup> <a name="objectLockEnabled" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.objectLockEnabled"></a>
+
+```typescript
+public readonly objectLockEnabled: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false, unless objectLockDefaultRetention is set (then, true)
+
+Enable object lock on the bucket.
+
+Enabling object lock for existing buckets is not supported. Object lock must be
+enabled when the bucket is created.
+
+> [https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html#object-lock-bucket-config-enable](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html#object-lock-bucket-config-enable)
+
+---
+
+##### `objectOwnership`<sup>Optional</sup> <a name="objectOwnership" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.objectOwnership"></a>
+
+```typescript
+public readonly objectOwnership: ObjectOwnership;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.ObjectOwnership
+- *Default:* No ObjectOwnership configuration, uploading account will own the object.
+
+The objectOwnership of the bucket.
+
+> [https://docs.aws.amazon.com/AmazonS3/latest/dev/about-object-ownership.html](https://docs.aws.amazon.com/AmazonS3/latest/dev/about-object-ownership.html)
+
+---
+
+##### `publicReadAccess`<sup>Optional</sup> <a name="publicReadAccess" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.publicReadAccess"></a>
+
+```typescript
+public readonly publicReadAccess: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Grants public read access to all objects in the bucket.
+
+Similar to calling `bucket.grantPublicAccess()`
+
+---
+
+##### `removalPolicy`<sup>Optional</sup> <a name="removalPolicy" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.removalPolicy"></a>
+
+```typescript
+public readonly removalPolicy: RemovalPolicy;
+```
+
+- *Type:* aws-cdk-lib.RemovalPolicy
+- *Default:* The bucket will be orphaned.
+
+Policy to apply when the bucket is removed from this stack.
+
+---
+
+##### `serverAccessLogsBucket`<sup>Optional</sup> <a name="serverAccessLogsBucket" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.serverAccessLogsBucket"></a>
+
+```typescript
+public readonly serverAccessLogsBucket: IBucket;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.IBucket
+- *Default:* If "serverAccessLogsPrefix" undefined - access logs disabled, otherwise - log to current bucket.
+
+Destination bucket for the server access logs.
+
+---
+
+##### `serverAccessLogsPrefix`<sup>Optional</sup> <a name="serverAccessLogsPrefix" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.serverAccessLogsPrefix"></a>
+
+```typescript
+public readonly serverAccessLogsPrefix: string;
+```
+
+- *Type:* string
+- *Default:* No log file prefix
+
+Optional log file prefix to use for the bucket's access logs.
+
+If defined without "serverAccessLogsBucket", enables access logs to current bucket with this prefix.
+
+---
+
+##### `transferAcceleration`<sup>Optional</sup> <a name="transferAcceleration" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.transferAcceleration"></a>
+
+```typescript
+public readonly transferAcceleration: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Whether this bucket should have transfer acceleration turned on or not.
+
+---
+
+##### `versioned`<sup>Optional</sup> <a name="versioned" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.versioned"></a>
+
+```typescript
+public readonly versioned: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false (unless object lock is enabled, then true)
+
+Whether this bucket should have versioning turned on or not.
+
+---
+
+##### `websiteErrorDocument`<sup>Optional</sup> <a name="websiteErrorDocument" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.websiteErrorDocument"></a>
+
+```typescript
+public readonly websiteErrorDocument: string;
+```
+
+- *Type:* string
+- *Default:* No error document.
+
+The name of the error document (e.g. "404.html") for the website. `websiteIndexDocument` must also be set if this is set.
+
+---
+
+##### `websiteIndexDocument`<sup>Optional</sup> <a name="websiteIndexDocument" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.websiteIndexDocument"></a>
+
+```typescript
+public readonly websiteIndexDocument: string;
+```
+
+- *Type:* string
+- *Default:* No index document.
+
+The name of the index document (e.g. "index.html") for the website. Enables static website hosting for this bucket.
+
+---
+
+##### `websiteRedirect`<sup>Optional</sup> <a name="websiteRedirect" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.websiteRedirect"></a>
+
+```typescript
+public readonly websiteRedirect: RedirectTarget;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.RedirectTarget
+- *Default:* No redirection.
+
+Specifies the redirect behavior of all requests to a website endpoint of a bucket.
+
+If you specify this property, you can't specify "websiteIndexDocument", "websiteErrorDocument" nor , "websiteRoutingRules".
+
+---
+
+##### `websiteRoutingRules`<sup>Optional</sup> <a name="websiteRoutingRules" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.websiteRoutingRules"></a>
+
+```typescript
+public readonly websiteRoutingRules: RoutingRule[];
+```
+
+- *Type:* aws-cdk-lib.aws_s3.RoutingRule[]
+- *Default:* No redirection rules.
+
+Rules that define when a redirect is applied and the redirect behavior.
 
 ---
 
@@ -1208,16 +2088,6 @@ public readonly cloudFrontOriginType: SecureCloudFrontOriginType;
 ```
 
 - *Type:* <a href="#@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginType">SecureCloudFrontOriginType</a>
-
----
-
-##### `bucketName`<sup>Optional</sup> <a name="bucketName" id="@gammarers/aws-secure-cloudfront-origin-bucket.SecureCloudFrontOriginAccessIdentityBucketProps.property.bucketName"></a>
-
-```typescript
-public readonly bucketName: string;
-```
-
-- *Type:* string
 
 ---
 

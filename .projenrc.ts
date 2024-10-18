@@ -13,16 +13,16 @@ const project = new awscdk.AwsCdkConstructLibrary({
   description: 'AWS CloudFront distribution origin S3 bucket.',
   repositoryUrl: 'https://github.com/gammarers/aws-secure-cloudfront-origin-bucket.git',
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 's3', 'bucket'],
-  majorVersion: 1,
+  majorVersion: 2,
   npmAccess: javascript.NpmAccess.PUBLIC,
   deps: [
-    '@gammarers/aws-secure-bucket@~1.4.1',
+    '@gammarers/aws-secure-bucket@^2.0.14',
   ],
   peerDeps: [
-    '@gammarers/aws-secure-bucket@~1.4.1',
+    '@gammarers/aws-secure-bucket@^2.0.14',
   ],
   minNodeVersion: '16.0.0',
-  workflowNodeVersion: '20.11.0',
+  workflowNodeVersion: '22.4.x',
   depsUpgrade: true,
   depsUpgradeOptions: {
     workflowOptions: {
