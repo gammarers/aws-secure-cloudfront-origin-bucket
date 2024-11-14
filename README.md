@@ -11,6 +11,9 @@
 
 An AWS CDK construct library to create secure S3 buckets for CloudFront origin.
 
+> [!WARNING]
+> v2.1.0: remove origin access identity(oai) support
+
 ## Install
 
 ### TypeScript
@@ -50,31 +53,20 @@ dotnet add package gammarers.CDK.AWS.SecureCloudFrontOriginBucket
 
 ## Example
 
-### for OAI(Origin Access Identity)
-
-```typescript
-import { SecureCloudFrontOriginBucket, SecureCloudFrontOriginType } from '@gammarers/aws-secure-cloudfront-origin-bucket';
-
-const oai = new cloudfront.OriginAccessIdentity(stack, 'OriginAccessIdentity');
-
-new SecureCloudFrontOriginBucket(stack, 'SecureCloudFrontOriginBucket', {
-  bucketName: 'example-origin-bucket',
-  cloudFrontOriginType: SecureCloudFrontOriginType.ORIGIN_ACCESS_IDENTITY,
-  cloudFrontOriginAccessIdentityS3CanonicalUserId: oai.cloudFrontOriginAccessIdentityS3CanonicalUserId,
-});
-```
-
 ### for OAC(Origin Access Control)
 
 ```typescript
 import { SecureCloudFrontOriginBucket, SecureCloudFrontOriginType } from '@gammarers/aws-secure-cloudfront-origin-bucket';
 
-declare const distribution: cloudfront.Distribution;
-
-new SecureCloudFrontOriginBucket(stack, 'SecureCloudFrontOriginBucket', {
+const originBucket = new SecureCloudFrontOriginBucket(stack, 'SecureCloudFrontOriginBucket', {
   bucketName: 'example-origin-bucket',
-  cloudFrontOriginType: SecureCloudFrontOriginType.ORIGIN_ACCESS_CONTROL,
-  cloudFrontArn: `arn:aws:cloudfront::123456789:distribution/${distribution.distributionId}`,
+});
+
+const distribution = new cloudfront.Distribution(this, 'Distribution', {
+  defaultRootObject: 'index.html',
+  defaultBehavior: {
+    origin: origins.S3BucketOrigin.withOriginAccessControl(originBucket),
+  },
 });
 ```
 
